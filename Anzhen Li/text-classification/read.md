@@ -1,3 +1,4 @@
+
 利用sklearn实现文本分类
 =====================
 ## 1.开发环境
@@ -5,17 +6,17 @@ python3.6 + Mac +sklearn
 语料库是爬取的新闻排行榜，一共有47872个新闻文档，分为13类。
 
 ## 2.代码实现
-### 预处理
+预处理
 采用HanLP.segment分词，去除了停用词<br>
-### 构造词袋
+#### 构造词袋
 sklearn.feature_extraction.text.CountVectorizer<br>
-### 特征选择（可选）
+#### 特征选择（可选）
 sklearn.feature_selection.SelectPercentile(chi2, percentile=)<br>
-### 特征提取（可选）
+#### 特征提取（可选）
 sklearn.feature_extraction.text.TfidfTransformer<br>
-### 采用了十折交叉验证
+#### 采用了十折交叉验证
 sklearn.model_selection.StratifiedKFold<br>
-### 分类器
+#### 分类器
 sklearn.naive_bayes.MultinomialNB()<br>
 
 ## 3.代码效果
