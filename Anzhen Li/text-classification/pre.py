@@ -5,16 +5,12 @@ from pyhanlp import *
 import multiprocessing
 
 '''对文件进行预处理操作'''
-'''Pretreatment类是用于对单个txt文件，读取、预处理、存储'''
-'''调用时要进行文件夹批量操作'''
-
 
 class Pretreatment(object):
     def __init__(self, path, stopwords):
         self.filepath = path
         self.text = []
         self.text_cut_all = {}
-        # self.thu1 = thulac.thulac(T2S=True, seg_only=True, filt=True)
         self.stopwords = stopwords
         self.textlist = {}  # 记录每类下所有的文章
 
@@ -43,8 +39,6 @@ class Pretreatment(object):
     '''一个文本的预处理（分词、过滤）'''
     def filter(self, text_line):
         text_cut_one = []
-        # text_cuts = self.thu1.cut(text_line, text=True)            # @ 清华切词
-        # text_cuts = text_cuts.split(' ')                           # @
         text_cuts = HanLP.segment(text_line)                        # @@ HanLp切词
         for text_cut in text_cuts:
             text_cut = re.findall(r'(.*?)/', str(text_cut))[0]    # @@
