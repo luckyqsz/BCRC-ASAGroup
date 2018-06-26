@@ -8,7 +8,7 @@ python3.6 + Mac +sklearn
 预处理：采用HanLP.segment分词，去除了停用词
 构造词袋：sklearn.feature_extraction.text.CountVectorizer
 特征选择（可选）：sklearn.feature_selection.SelectPercentile(chi2, percentile=)
-特征提取：sklearn.feature_extraction.text.TfidfTransformer
+特征提取（可选）：sklearn.feature_extraction.text.TfidfTransformer
 采用了十折交叉验证：sklearn.model_selection.StratifiedKFold
 分类器：sklearn.naive_bayes.MultinomialNB()
 
