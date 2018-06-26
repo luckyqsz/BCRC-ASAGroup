@@ -15,7 +15,6 @@ np.set_printoptions(threshold=np.inf)
 
 class Matrix(object):
     def __init__(self):
-        # self.textlist = {}     # 记录每类下所有的文章
         self.y = []            # y
         self.X = np.arange(0)
         self.y_test = []            # y_test
@@ -35,10 +34,6 @@ class Matrix(object):
             self.X, self.y = np.array(vect)[train_all_index], np.array(y)[train_all_index]
             self.X_test, self.y_test = np.array(vect)[test_index], np.array(y)[test_index]
             break
-        print('训练集个数：', len(self.y))
-        print('测试集个数：', len(self.y_test))
-        print(self.X.shape, self.X_test.shape)
-        print(self.y.shape, self.y_test.shape)
 
     '''读文件内容'''
     def readfile(self, path):
@@ -59,7 +54,6 @@ class Matrix(object):
                         text_list_filter.append(text)
                         content.append(text)
                         y.append(num)
-                    # self.textlist[num] = text_list_filter
         return content, y
 
     def filter(self, text_line):
@@ -73,23 +67,14 @@ class Matrix(object):
 
     '''选取特征值，得到tfidf权重'''
     def create_matrix(self):
-        '''
         ### CHI2,选前10% ###
         select = SelectPercentile(chi2, percentile=10)
         self.X = select.fit_transform(self.X, self.y)
         self.X_test = select.transform(self.X_test)
-        print(self.X.shape, self.X_test.shape)
-        print(self.y.shape, self.y_test.shape)
-        print('chi2完成')
-        '''
         ### tfidf ###
         tfidf = TfidfTransformer()
         self.X = tfidf.fit_transform(self.X, self.y).toarray()   # 最终获得的训练矩阵
         self.X_test = tfidf.transform(self.X_test)
-        print('TfIdf完成')
-        print(self.X.shape, self.X_test.shape)
-        print(self.y.shape, self.y_test.shape)
-
 
     '''cross-validation, MultinomialNB'''
     def train(self):
@@ -102,17 +87,14 @@ class Matrix(object):
         i = 0
         classifier_text = MultinomialNB()
         for train_index, validation_index in kf.split(self.X, self.y):
-            ## 划分训练集、验证集
-            print('交叉验证:{}'.format(i))
+            ## 划分训练集、验证集 ##
             i += 1
             X_train, y_train = np.array(self.X)[train_index], np.array(self.y)[train_index]
             X_validation, y_validation = np.array(self.X)[validation_index], np.array(self.y)[validation_index]
-            ## 训练 ##
-            # classifier_text = MultinomialNB()
+      
             classifier_text.fit(X_train, y_train)
             y_validate = classifier_text.predict(X_validation)
             p, r, f1, _ = precision_recall_fscore_support(y_validation, y_validate, average='macro')
-            print("精确率: {0}, 召回率: {1}, F1值: {2}".format(p, r, f1))
             p_cross += p
             r_cross += r
             f1_cross += f1
