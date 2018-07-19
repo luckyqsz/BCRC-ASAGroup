@@ -1,0 +1,123 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# code 总结\n",
+    "- **Function**\n",
+    "\n",
+    "> `get_cookies`:\n",
+    "> - cookies更新，每次爬取之前，从网站copy新的cookies到.txt文件\n",
+    "> - Cookies_web.txt 和 Cookies_mobile.txt\n",
+    "> - get_cookies：读取.txt——>requests.get()\n",
+    "> - 全局对象：cookies_web cookies_mobile\n",
+    "\n",
+    "> `initialize_spider`\n",
+    "> - 读取spider_history.txt，返回当前history的url_list,page_list[:-1],time_list[:-1]\n",
+    "\n",
+    "> `record_spider_history`\n",
+    "> - 将爬取到的信息写入spider_history文件\n",
+    "\n",
+    "> `find_weibo_id`\n",
+    "> - 依据从不实信息列表中的获得url_list,get到每一条不实信息的界面html\n",
+    "> - 再从该html中正则到\"原文\"的url——mobile版的个人微博界面\n",
+    "> - 根据该url获得个人微博界面的html——一系列信息，比如weibo id等\n",
+    "\n",
+    "> `get_rumor_web_url`\n",
+    "> - 传入不实信息列表page，返回该page的list信息\n",
+    "> - 其中嵌入find_weibo_id函数，故返回了所有我们需要的信息\n",
+    "\n",
+    "> `main`部分（并未定义main函数）\n",
+    "> - 定义爬取微博数目interval 定义写入的filename\n",
+    "> - 首先初始化，读取history，如果文件为空，需要自定义return的参数——try-except\n",
+    "> - 定义爬取微博flag变量——i\n",
+    "> - 进入while true循环\n",
+    "> - 依据history的page，get到对应网页的所有info\n",
+    "> - 进入判断\n",
+    "> - 判断：i与interval的比较 循环结束——break语句\n",
+    "> - 判断：当前page的最后一行晚于history，说明history已经有了此页全部信息，继续爬取下一行，page+1-------问题？如果此页面更新了。。\n",
+    "> - 否则，遍历当前爬取page的url，是否在history，如果在，继续遍历，直至遍历到新的url或者page+1，从新的url开始截取list信息，使用record_spider_history函数将截取的信息放入history文件中，此时更新i（更新history文件时便是更新i时）\n",
+    "\n",
+    "- **code framework**\n",
+    "\n",
+    "> `pipeline`\n",
+    "> - initialize ——> get page info ——> record page info ——> break\n",
+    "> - initialize: `initialize_spider`\n",
+    "> - get page info: `get_cookies`  `find_weibo_id`  `get_rumor_web_url`\n",
+    "> - record page info: `record_history`\n",
+    "> - break: `main`\n",
+    "\n",
+    "- **skill summary**\n",
+    "\n",
+    "> - with...as...\n",
+    "> - dict[name]=value\n",
+    "> - file operation:\n",
+    "> > - f.read().split('flag',number)\n",
+    "> > - f.writelines(str)\n",
+    "> > - [line.strip() for line in f.read().split('\\n')]\n",
+    "> - str.encode:bytes   bytes.decode:str\n",
+    "> - list[0] = str,一般提取为str的形式，左侧公式经常用到\n",
+    "> - python3 spider,never use python2...\n",
+    "> - html.text re.findall requests.get\n",
+    "> - 正则匹配 \n",
+    "> > - 使用r''，简化转移字符的问题r'\\\\''就代表'\\'\n",
+    "> > - .*? .+? \\d+\n",
+    "> - list operation,for循环，if判断，list.count\n",
+    "> - dict.items(),sorted,lambda x:x[1]\n",
+    "> - try...except...\n",
+    "> - r的使用，出现/的str都要使用，或者默认使用r\n",
+    "> - range() is iterable\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:py36]",
+   "language": "python",
+   "name": "conda-env-py36-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.6"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": false,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {},
+   "toc_section_display": true,
+   "toc_window_display": false
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
