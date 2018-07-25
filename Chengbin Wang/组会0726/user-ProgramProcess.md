@@ -43,7 +43,7 @@ DeepLab V2
 
 举一张图片的例子（增加注释）：
 
-```json
+```
 {
 	"url": "http://www.sinaimg.cn/dy/slidenews/2_img/2015_34/730_1570079_284793.jpg", 
 	"image_id": "0a00a9aa4e31fb51611afb11752ab8b0732894ee", 
@@ -91,11 +91,19 @@ DeepLab V2
 
 ### Pic Examples
 
-- 原始图像：调用每张图像所对应的JSON信息，以bounding box所指定的边界，对最原始的图像进行切割后得到。![原始图像](./V1_original.jpg)
+- 原始图像：调用每张图像所对应的JSON信息，以bounding box所指定的边界，对最原始的图像进行切割后得到。
+
+![原始图像](./V1_original.jpg)
+
   - 可以看出，bounding box并不好，没有达到真正的框定这一指标（周围预留出的空间太大）
-- 图像mask：这之中有一些肉眼很难分辨的、深浅不一的圆圈。这就是置信区间。![图像mask](./V1_mask.png)
+- 图像mask：这之中有一些肉眼很难分辨的、深浅不一的圆圈。这就是置信区间。
+
+![图像mask](./V1_mask.png)
+
   - 圆圈内部的像素点值为分类的类别。例：(14,14,14)为头顶所代表的置信区域的具体像素值。
-- 合成后的图像：为了方便起见，我只是将位置标出来了，但是没有控制圆形置信区域的深浅。图像所代表的数组只能用`int`类型，不能使用`float`类型（`numpy`初始化数组，默认类型是`float`类型，），否则会出现显示上的错误。注意下图，无右髋关节（因为其不可见）。![合成图像](./V1_mixed.png)
+- 合成后的图像：为了方便起见，我只是将位置标出来了，但是没有控制圆形置信区域的深浅。图像所代表的数组只能用`int`类型，不能使用`float`类型（`numpy`初始化数组，默认类型是`float`类型，），否则会出现显示上的错误。注意下图，无右髋关节（因为其不可见）。
+
+![合成图像](./V1_mixed.png)
 
 训练DeepLab，不使用PASCAL VOC作为数据集，通过命令行改为AIChallenger的数据集。
 
@@ -200,8 +208,11 @@ mAP越高越好，在`evaluation.py`中有计算方法。下面是一张图片�
 | 14-neck | 298 | 204 |1|299 | 206 |1|
 
 该原始图片为：
+
 ![预测前](./V1_prediction_original.jpg)
+
 预测后，加上mask后的图片为：
+
 ![预测后](./V1_prediction_mixed.png)
 
 该网络蛮聪明的，在不确定的地方将flag变为0，不显示出来。**这是因为训练样本中没有将隐藏节点标记出来的缘故**。但总觉得不加上隐藏节点的话是一种浪费信息的事情，所以得尝试一下如何才能预测到隐藏节点。
@@ -264,9 +275,13 @@ I need to find a more accurate dataset and retrain a SSD or something else. Perh
 将所有隐藏节点可视化，重新进行预处理。
 示例图片如下：
 原始图片：
+
 ![原始图片V2](./V2_original.jpg)
+
 处理后图片：
+
 ![处理后图片V2](./v2_result.png)
+
 可以看出，左右手肘原本不可见，在经过V2对于数据集的预处理之后变得可见。
 
 接下来，训练模型，直接将V1中模型的训练结果作为V2模型的初始化权重，进行训练。将最终V2模型的snapshots（包括tensorboard和checkpoint的数据）保存至`train/snapshots_enableUnvisible`中。
@@ -341,22 +356,6 @@ $ CUDA_VISIBLE_DEVICES=1 python tensorflow-deeplab-resnet/train.py --data-dir=./
 # Implementation of AlphaPose
 
 下周工作。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
