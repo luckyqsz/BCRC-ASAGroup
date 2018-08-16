@@ -17,7 +17,7 @@ two-stream卷积网络对于长范围时间结构的建模无能为力，主要�
 
 TSN网络示意图：
 
-![1534235023873](C:\Users\18292\AppData\Local\Temp\1534235023873.png)
+![1534235023873](https://github.com/luckyqsz/BCRC-ASAGroup/edit/master/Jiayu%20Chen/report/1534235023873.png)
 
 ​                                                              <center>**图1 TSN网络示意图**</center>
 
