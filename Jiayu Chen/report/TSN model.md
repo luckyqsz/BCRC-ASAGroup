@@ -17,7 +17,7 @@ two-stream卷积网络对于长范围时间结构的建模无能为力，主要�
 
 TSN网络示意图：
 
-![1534235023873](https://github.com/luckyqsz/BCRC-ASAGroup/edit/master/Jiayu%20Chen/report/1534235023873.png)
+![1534235023873](./1534235023873.png)
 
 ​                                                              <center>**图1 TSN网络示意图**</center>
 
@@ -54,7 +54,7 @@ TSN选择BN-Inception(Inception with Batch Normalization)构建模块，由于�
 
 ##### 网络输入
 
-TSN通过探索更多的输入模式来提高辨别力。除了像two-stream那样，空间流卷积网络操作单一RGB图像，时间流卷积网络将一堆连续的光流场作为输入，作者提出了两种额外的输入模式：RGB差异(RGB difference)和扭曲的光流场(warped optical flow fields)。![20180319170737628](C:\Users\18292\Desktop\20180319170737628.png)
+TSN通过探索更多的输入模式来提高辨别力。除了像two-stream那样，空间流卷积网络操作单一RGB图像，时间流卷积网络将一堆连续的光流场作为输入，作者提出了两种额外的输入模式：RGB差异(RGB difference)和扭曲的光流场(warped optical flow fields)。![20180319170737628](./20180319170737628.png)
 
 ​                                                         <center>**图2 四种输入模式的例子**</center>
 
