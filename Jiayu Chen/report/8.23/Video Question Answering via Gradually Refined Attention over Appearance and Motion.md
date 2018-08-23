@@ -88,6 +88,7 @@ $$
 $$
 a_t = (a^1_t + a^2_t)/2
 $$
+
 $$
 g_t = \quad\sum_{i=1}^{N}a^i_ttanh(W_ff_i + b_f)
 $$
