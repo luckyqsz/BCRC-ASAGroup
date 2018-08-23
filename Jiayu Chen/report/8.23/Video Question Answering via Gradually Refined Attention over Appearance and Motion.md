@@ -4,7 +4,7 @@
 
 本文中，我们提出了一个端到端的视频问答模型。模型首先采样出视频一系列的帧和片段，从中抽取出纹理和运动特征。随后，模型逐词的读取问题并且利用帧级和片段级相互作用的特征来精炼模型的注意力。当所有问题的单词被处理时，模型产生最终最优的注意力，该注意力融合了纹理和运动特征做为视频的表征。在整个过程中，粗糙的问题特征和精细的单词特征都被利用。
 
-![35c9f2d6bc08950d1470d1956422701](C:\Users\18292\Desktop\Paper\CV笔记\35c9f2d6bc08950d1470d1956422701.png)
+![35c9f2d6bc08950d1470d1956422701](.\35c9f2d6bc08950d1470d1956422701.png)
 
 本文的主要贡献如下：
 
@@ -28,11 +28,11 @@ Question:问题表示为一系列的词汇标注$Q = [q_1,q_2,...,q_T]$，我们
 
 ##### AMU
 
-![53a9f5a1c138c98014c337c3b36310d](C:\Users\18292\Desktop\Paper\CV笔记\53a9f5a1c138c98014c337c3b36310d.png)
+![53a9f5a1c138c98014c337c3b36310d](.\53a9f5a1c138c98014c337c3b36310d.png)
 
 问题的单词按顺序被处理，同时一个新颖的注意力机制在过程中被应用。模型首先使用embedding layer 将输入单词转化成embedding $x_t$，这保存当前单词的语义信息。embedding $x_t$随后喂入LSTM~q~，这一步操作可认为是将处理过的问题信息保存下来。将$x_t$和$h^q_t$输入到AMU单元，针对外观和运动特征产生并精炼注意力。如图2所示，AMU将当前的word embedding，question information，and video features作为输入，随后对视频特征执行几轮精炼注意力。为了清楚起见，我们使用双线表示包含2个通道的特征。
 
-![229363cbbdfdfc2e36f4a60f2a4588f](C:\Users\18292\Desktop\Paper\CV笔记\229363cbbdfdfc2e36f4a60f2a4588f.png)
+![229363cbbdfdfc2e36f4a60f2a4588f](.\229363cbbdfdfc2e36f4a60f2a4588f.png)
 
 AMU中包含4种操作
 
@@ -110,5 +110,5 @@ answer = arg\ max\ softmax(W_g(W_xc^q_T.c^a_T.v_T))
 $$
 回答也能够通过LSTM network产生。问题信息$c^q_T$和注意力过程$c^a_T$被用来初始化LSTM network，同时精炼视频表征$v_T$用来作为它的第一个输入。回答的每个词可以像上述公式一样产生。
 
-![42ed39cf4c8fde074c8f68600373683](C:\Users\18292\Desktop\Paper\CV笔记\42ed39cf4c8fde074c8f68600373683.png)
+![42ed39cf4c8fde074c8f68600373683](.\42ed39cf4c8fde074c8f68600373683.png)
 
