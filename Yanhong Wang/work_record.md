@@ -2,14 +2,70 @@
 typora-root-url: work_record
 ---
 
+
+# 20180824-20180830
+## 周待做列表
+* 算法与服务器之间交接测试及完善
+* 步态系统社区测试
+* 读论文
+  * Through-Wall Human Pose Estimation Using Radio Signals，CVPR2018
+  * Total Capture: A 3D Deformation Model for Tracking Faces, Hands, and Bodies,  CVPR2018(best student paper)
+## 未明确时间工作
+* GPU服务器重装系统
+* 画钟七分法
+* Openpose剩余复现工作
+# 20180817-20180823
+## 周代做列表
+* 算法与web服务器之间的初步交接测试（算法已完成，等待web服务器接口测试）
+* 算法与ftp服务器之间的初步交接测试（完成）
+
+# 20180810-20180816
+
+## 周待做列表
+* Openpose源码复现（未完成）
+* 服务器问题（未完成）
+* 系统中山医院初步测试（完成）
+
+# 20180803-20180809
+
+## 周待做列表
+
+* 目前整个系统已经基本跑通，接下来还需要做一些细化的事情
+
+* 优化画钟识别的代码（部分完成）
+  * 能处理拍摄的彩色图片（完成）
+  * 批量处理功能去除（完成）
+  * 目前的resize是直接截取中间部分（完成）
+  * 受光线影响（mark，待评估）
+
+* 优化步态识别的代码（完成）
+  * 用深度视频进行轮廓识别
+
+* svn上面的代码整理（完成）
+  * [svn地址](https://118.178.19.58:8443/svn/zs-hospital)
+
+* 寻找合适的核心代码（未完成）
+
+  * OpenPose源码
+
+    * Body-Foot Estimation
+
+    > ![dance_foot.gif](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/media/dance_foot.gif?raw=true) 
+
+    - gpu环境搭建
+      - [cuda测试](https://blog.csdn.net/u012235003/article/details/54575758)
+        - failed: CUDA driver version is insufficient for CUDA runtime version(CUDA和cuDNN系统已经安装，所以不用重新安装……)
+      - mark：安装cudnn时候安装pytorch因为gcc版本太低识别不了一个命令，下载了高版本的gcc在download里面还没有安装
+      - 
+
 # 20180727-20180802
 ## 周待做列表
-* 更多更稳定视频的拍摄和前处理；
-* 步宽检测失败原因排查；
-* 重构python代码，尝试处理正面视频；
-* 将画钟代码应用到服务器；
-* 尝试得到转身步数。
-* 搭建系统
+* 更多更稳定视频的拍摄和前处理；(完成)
+* 步宽检测失败原因排查；(完成)
+* 重构python代码，尝试处理正面视频；(评估后认为暂时不需要)
+* 将画钟代码应用到服务器；(完成)
+* 尝试得到转身步数。(评估后认为暂时无法完成)
+* 搭建系统。（完成）
 
 ### 步宽
 
