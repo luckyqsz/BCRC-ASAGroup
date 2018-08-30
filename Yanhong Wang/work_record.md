@@ -3,14 +3,74 @@ typora-root-url: work_record
 ---
 
 
+
+
+
 # 20180824-20180830
+
 ## 周待做列表
-* 算法与服务器之间交接测试及完善
-* 步态系统社区测试
+* 算法与服务器之间交接测试及完善(交接测试完成，算法需要完善意外处理程序)
+* 步态系统社区测试（完成）
 * 读论文
-  * Through-Wall Human Pose Estimation Using Radio Signals，CVPR2018
-  * Total Capture: A 3D Deformation Model for Tracking Faces, Hands, and Bodies,  CVPR2018(best student paper)
+  * Through-Wall Human Pose Estimation Using Radio Signals，CVPR2018（进行中）
+  * Total Capture: A 3D Deformation Model for Tracking Faces, Hands, and Bodies,  CVPR2018(best student paper)（未开始）
+## 论文
+
+| **Through-Wall Human Pose Estimation Using Radio Signals**   |
+| ------------------------------------------------------------ |
+| 下载地址：<http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2406.pdf> |
+
+* Author:  **Mingmin Zhao**
+
+* Advisor: **Dina Katabi** 
+
+* demo：
+
+
+  <iframe width="920" height="518" src="https://www.youtube.com/embed/HgDdaMy8KNE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+* features：
+
+  * cross-modal and multi-modal learning 无法对无线信号进行标注，所以通过同步的视频信号提取人体姿势信息来，再完成监督无线信号到姿势信息的训练。训练完成后，就可以直接由无线信号得到人体姿势信息。
+
+    ![1535612988492](/C:/Users/BCRC01/AppData/Local/Temp/1535612988492.png)
+
+  * 训练数据只有视线范围内能直接观察到人的数据，但训练完成后，即使人不在视线范围内也能被检测出来。
+
+  * 相对于从图像得到人体姿势信息的优势是，在视线中没有人体时也能检测出姿势，比如在夜晚或者墙的另一边。
+
+* 网络结构
+
+  * Realtime multiperson 2D pose estimation using part affinity fields
+
+  * 3D convolutional neural networks for human action recgnition
+
+    Learning spatiotemporal features with 3D convolutional networks
+
+    Temporal segment networks: Towards good practices for deep action recognition
+
+![1535612937289](/C:/Users/BCRC01/AppData/Local/Temp/1535612937289.png)
+
+* 效果：
+
+  ![1535615333134](/C:/Users/BCRC01/AppData/Local/Temp/1535615333134.png)
+
+* 不再深入
+
+  * 没有要求的wifi信号发送设备和收集设备以及设备布置方案，得不到测试集
+  * 这个文章的创新其实我也用不着
+
+* 中文参考：[读 CVPR-2018 Through-Wall Human Pose Estimation Using Radio Signals](https://blog.csdn.net/u013580397/article/details/80706626)
+
+* Questions: 
+  * vertical heatmap和horizontal heatmap怎么来的？
+    * see another paper:[Capturing the Human Figure Through a Wall](http://rfcapture.csail.mit.edu/rfcapture-paper.pdf)
+  * why RF signals in the WiFirange can reflect off the human body?
+* reading:
+  * summarize the background: 
+
 ## 未明确时间工作
+
 * GPU服务器重装系统
 * 画钟七分法
 * Openpose剩余复现工作
@@ -39,9 +99,11 @@ typora-root-url: work_record
   * 受光线影响（mark，待评估）
 
 * 优化步态识别的代码（完成）
+
   * 用深度视频进行轮廓识别
 
 * svn上面的代码整理（完成）
+
   * [svn地址](https://118.178.19.58:8443/svn/zs-hospital)
 
 * 寻找合适的核心代码（未完成）
@@ -116,11 +178,9 @@ typora-root-url: work_record
 * 效果图 
 
 | color_contour | depth_contour |
-|:---------|:--------------------|
-| ![color_contour](..\work_record\color_coutour.gif) | ![depth_contour](../work_record/depth_contour.gif) |
+|:--------------------|:--------------------|
+| ![color_contour](../work_record/color_contour.gif) {:width="400" height="300"} | ![depth_contour](../work_record/depth_contour.gif) {:width="400" height="300"} |
 | shadow，color | no feet |
-
-​    
 
 ### clock代码编译dll
 
@@ -157,6 +217,7 @@ typora-root-url: work_record
 * 看自然语言处理的一些东西，了解什么叫词向量等。
 ## clock class封装
 >参考：https://blog.csdn.net/dfdfdsfdfdfdf/article/details/52439651
+>
 >>vector作为参数的三种传参方式：https://www.cnblogs.com/xiaoxi666/p/6843211.html
 ## 改步态识别的代码
 >要拍摄视频<br>
