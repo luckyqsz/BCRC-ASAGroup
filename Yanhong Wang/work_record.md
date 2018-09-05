@@ -1,13 +1,161 @@
 ---
+
 typora-root-url: work_record
 ---
 
+待完成事项置顶：
+
+* GPU重装系统
+* openpose在服务器上跑通
+* 在服务器上搭建算法处理系统
+* 优化步态算法
+* 中山医院社区视频处理
+* 看论文
+
+# 20180831-20180906
+
+## 周待做列表
+
+- 服务器重装
+- 读论文
+  - Through-Wall Human Pose Estimation Using Radio Signals，CVPR2018（进行中）
+  - Total Capture: A 3D Deformation Model for Tracking Faces, Hands, and Bodies,  CVPR2018(best student paper)（未开始）
+
+## 重装系统bug打包
+
+参与人员：时迎琰、赵梓豪、冯新宇、王艳红
+
+* 组建raid时，检测不到下面两个硬盘卡中的硬盘，raid5不支持，好像是服务器主板不支持的原因—组建了raid10
+
+* 重装系统时，用ubuntu-server-16.04.5，安装过程中出现错误—未解决，调研后换ubuntu-desktop-16.04.5。
+
+  ```
+  [!!]Install the GRUB boot loader on a hard disk
+  
+  Unable to install GRUB in /dev/md126p2
+  Executing 'grub-install /dev/md126p2' failed.
+  
+  This is a fatal error.
+  ```
+
+* ubuntu-desktop-16.04.5安装成功，运行不成功。或者安装过程中出现上述错误
+
+  * 已有尝试：raid10改为raid0重装，用冯新宇的诡异经验方法重装……，失败
+  * 计划：用一块硬盘装，失败的话在自己电脑上装来排除安装盘问题
+
+## 论文
+
+| **Through-Wall Human Pose Estimation Using Radio Signals**   |
+| ------------------------------------------------------------ |
+| 下载地址：<http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2406.pdf> |
+
+- **Author:  Mingmin Zhao**
+
+- **Advisor: Dina Katabi** 
+
+- **Conference: CVPR 2018**
+
+- **demo：**
+
+  <iframe width="920" height="518" src="https://www.youtube.com/embed/HgDdaMy8KNE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+  ![20180905_1](../work_record/20180905_1.png)
+
+- features：**
+
+  - **cross-modal and multi-modal learning** ,无法对无线信号进行标注，所以通过同步的视频信号提取人体姿势信息来，再完成监督无线信号到姿势信息的训练。训练完成后，就可以直接由无线信号得到人体姿势信息。
+
+    ![1535612988492](/C:/Users/BCRC01/AppData/Local/Temp/1535612988492.png)
+
+  - 训练数据只有视线范围内能直接观察到人的数据，但训练完成后，即使人不在视线范围内也能被检测出来。
+
+  - 相对于从图像得到人体姿势信息的优势是，在视线中没有人体时也能检测出姿势，比如在夜晚或者墙的另一边。
+
+  - something bad: 
+
+    * errors in RF-Pose happen when a person is occluded by a metallic structure which blocks RF signals, or when people are too close and hence the low resolution RF signal fails to track all of them.
+    * the human body is opaque at the frequencies that traverse walls.
+    * The effective distance depends on its transmission power.(40 feet in this work)
+    * Only one activity: walking
+
+- **网络结构**
+
+  - Realtime multiperson 2D pose estimation using part affinity fields
+
+  - 3D convolutional neural networks for human action recgnition
+
+    Learning spatiotemporal features with 3D convolutional networks
+
+    Temporal segment networks: Towards good practices for deep action recognition
+
+![1535612937289](/C:/Users/BCRC01/AppData/Local/Temp/1535612937289.png)
+
+- **效果：**
+
+  ![1535615333134](/C:/Users/BCRC01/AppData/Local/Temp/1535615333134.png)
+
+  | **OKS**: Object keypoint similarity（对象关键点相似性） |
+  | :-------------- |
+  |   ![1536110792619](/C:/Users/BCRC01/AppData/Local/Temp/1536110792619.png) |
+
+  * **low OKS values (< 0.7)，RF-Pose win.**
+
+    Vision-based solution generate skeletons is the scene has a poster of a person,or a human reflection in a glass window or mirror.
+
+  * **low OKS values (< 0.7)，OpenPose win.**
+
+    * low spatial resolution of RF signals
+
+    * synchronization(同步性) between the RF heatmaps and the ground trueh images
 
 
 
+
+  * RF-Pose is better at large reflective areas
+
+    |  |
+    | --------------------- |
+    |  ![1536117083534](/C:/Users/BCRC01/AppData/Local/Temp/1536117083534.png) |
+
+  * RF-Pose operating over a clip of a few seconds：
+
+    | 100frames~3.3s，1 second away，too coarse. |
+    | ----------- |
+    |  ![1536122106817](/C:/Users/BCRC01/AppData/Local/Temp/1536122106817.png) |
+
+- **Questions: **
+
+  - vertical heatmap和horizontal heatmap怎么来的？
+
+    - see another paper:[Capturing the Human Figure Through a Wall](http://rfcapture.csail.mit.edu/rfcapture-paper.pdf)
+
+  - why RF signals in the WiFirange can reflect off the human body?
+
+    - see techniques like FMCW
+
+  - 100frames~3.3s，1 second away，too coarse.
+
+    ![1536122106817](/C:/Users/BCRC01/AppData/Local/Temp/1536122106817.png)
+
+- **不再深入**
+  - 没有要求的wifi信号发送设备和收集设备以及设备布置方案，得不到测试集
+  - occlusion在姿态识别中确实是一个大bug，但是在中山医院步态识别项目中不是
+  - RF-Pose为了解决occusion损失太多，假设太多。比如准确率，比如多图片输入单图片输出（估计处理速度会很慢，快速的动作应该也不行，文中没提）
+- **中文参考**：[读 CVPR-2018 Through-Wall Human Pose Estimation Using Radio Signals](https://blog.csdn.net/u013580397/article/details/80706626)
+
+- **thinking**
+
+  - 用X光视频或图片做输入（或训练）进行识别（和深度摄像头异曲同工，排除了视觉上的色系等的干扰）
+
+    > 百度X光骨架识别：[吴恩达团队发起骨骼X光片识别挑战赛](https://stanfordmlgroup.github.io/competitions/mura/)，今年1月，吴恩达团队开源了MURA ，这是一个骨骼 X 光片的大型数据集，总共有 40561 份多视图放射线影像。4月左右，发起了一项骨骼X光片识别挑战赛，目前还在进行中……
+
+## 下周要做工作：
+
+- 装系统啊装系统
+- 代码整理优化，找个服务器跑着，监督问题，多任务问题，异常处理问题
+- 中山医院视频处理（周一前）
 
 # 20180824-20180830
-
 ## 周待做列表
 * 算法与服务器之间交接测试及完善(交接测试完成，算法需要完善意外处理程序)
 * 步态系统社区测试（完成）
@@ -55,7 +203,7 @@ typora-root-url: work_record
 
   ![1535615333134](/C:/Users/BCRC01/AppData/Local/Temp/1535615333134.png)
 
-* 不再深入
+* 不再复现
 
   * 没有要求的wifi信号发送设备和收集设备以及设备布置方案，得不到测试集
   * 这个文章的创新其实我也用不着
@@ -66,8 +214,7 @@ typora-root-url: work_record
   * vertical heatmap和horizontal heatmap怎么来的？
     * see another paper:[Capturing the Human Figure Through a Wall](http://rfcapture.csail.mit.edu/rfcapture-paper.pdf)
   * why RF signals in the WiFirange can reflect off the human body?
-* reading:
-  * summarize the background: 
+    * see techniques like FMCW
 
 ## 未明确时间工作
 
