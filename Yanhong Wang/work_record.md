@@ -1,6 +1,8 @@
 ---
 
-typora-root-url: work_record
+
+typora-copy-images-to: work_record
+typora-root-url: ./
 ---
 
 待完成事项置顶：
@@ -65,7 +67,7 @@ typora-root-url: work_record
 
   - **cross-modal and multi-modal learning** ,无法对无线信号进行标注，所以通过同步的视频信号提取人体姿势信息来，再完成监督无线信号到姿势信息的训练。训练完成后，就可以直接由无线信号得到人体姿势信息。
 
-    ![20180905_2](../work_record/20180905_2.png)
+    ![20180905_2](./work_record/20180905_2.png)
 
   - 训练数据只有视线范围内能直接观察到人的数据，但训练完成后，即使人不在视线范围内也能被检测出来。
 
@@ -88,15 +90,15 @@ typora-root-url: work_record
 
     Temporal segment networks: Towards good practices for deep action recognition
 
-![20180905_3](../work_record/20180905_3.png)
+![20180905_3](./work_record/20180905_3.png)
 
 - **效果：**
 
-  ![20180905_4](../work_record/20180905_4.png)
+  ![20180905_4](./work_record/20180905_4.png)
 
   | **OKS**: Object keypoint similarity（对象关键点相似性） |
-  | :-------------- |
-  |   ![1536110792619](/C:/Users/BCRC01/AppData/Local/Temp/1536110792619.png) |
+  | :------------------------------------------------------ |
+  | ![20180905_7](./work_record/20180905_7.png)             |
 
   * **low OKS values (< 0.7)，RF-Pose win.**
 
@@ -115,13 +117,13 @@ typora-root-url: work_record
 
     |  |
     | --------------------- |
-    | ![20180905_5](../work_record/20180905_5.png) |
+    | ![20180905_5](./work_record/20180905_5.png) |
 
   * RF-Pose operating over a clip of a few seconds：
 
-    | 100frames~3.3s，1 second away，too coarse.   |
-    | -------------------------------------------- |
-    | ![20180905_6](../work_record/20180905_6.png) |
+    | 100frames~3.3s，1 second away，too coarse.  |
+    | ------------------------------------------- |
+    | ![20180905_6](./work_record/20180905_6.png) |
 
 - **Questions: **
 
@@ -135,9 +137,10 @@ typora-root-url: work_record
 
   - 100frames~3.3s，1 second away，too coarse.
 
-    ![20180905_6](../work_record/20180905_6.png)
+    ![20180905_6](./work_record/20180905_6.png)
 
 - **不再深入**
+
   - 没有要求的wifi信号发送设备和收集设备以及设备布置方案，得不到测试集
   - occlusion在姿态识别中确实是一个大bug，但是在中山医院步态识别项目中不是
   - RF-Pose为了解决occusion损失太多，假设太多。比如准确率，比如多图片输入单图片输出（估计处理速度会很慢，快速的动作应该也不行，文中没提）
