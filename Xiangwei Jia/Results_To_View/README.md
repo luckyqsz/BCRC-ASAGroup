@@ -8,7 +8,7 @@
 *************
 5.上传文件word2vec详细推导.doc（08.30）；<br>
 *************
-6.新建文件夹RNTN,并上传Recursive Deep Model for Semantic Compositionality  Over a Sentiment Treebank的paper及阅读pptx;<br>
+6.新建文件夹RNTN,并上传Recursive Deep Model for Semantic Compositionality  Over a Sentiment Treebank的paper及阅读pptx(09.05);<br>
 
 
 
