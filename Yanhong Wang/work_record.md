@@ -59,7 +59,7 @@ typora-root-url: work_record
 
   <iframe width="920" height="518" src="https://www.youtube.com/embed/HgDdaMy8KNE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-  ![20180905_1](../work_record/20180905_1.png)
+  ![20180905_1](./work_record/20180905_1.png)
 
 - features：**
 
