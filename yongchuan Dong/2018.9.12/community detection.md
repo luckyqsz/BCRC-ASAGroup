@@ -6,7 +6,7 @@
 
 A graph is a representation of a set of objects called vertices, some of which are connected by links. Object connections are depicted by links, also called edges. Such a mathematical structure may be referred to as a unipartite graph
 
-![1536714105778](C:\Users\dyc\Desktop\组会\2018.9.12\1536714105778.png)
+![1536714105778](./1536714105778.png)
 
 
 
@@ -14,7 +14,7 @@ A graph is a representation of a set of objects called vertices, some of which a
 
 A hypergraph H is apair(V, E) whereV D v1, v2, ..., vn is a nonempty (usually limited) set and E D E1, E2, ..., Em is a family of not empty subsets of V. The elements of V are the vertices of H. The elements of E are the edges (also called hyperedges) of H
 
-![1536714200574](C:\Users\dyc\Desktop\组会\2018.9.12\1536714200574.png)
+![1536714200574](./1536714200574.png)
 
 
 
@@ -24,7 +24,7 @@ Freeman was the first to use Galois lattices in order to represent network data.
 
 This set of relations can then be represented by a binary bi-adjacency matrix, whereby objects o are the columns, attributes a are the rows, and a “1” is placed at the cell corresponding to a pair (oi ,aj)  if oi possesses aj . A maximum subset of objects that contain a subset of attributes is defined as a “concept” ,that is, a group of objects for which the addition or removal of an attribute changes its constitution. All objects of a concept then form the “extent,” and all attributes of a concept give rise to the “intent”. According to the definition of Galois hierarchies, an object can appear in all the concepts where it can share the same set of attributes with other objects belonging to other concepts.
 
-![1536714263892](C:\Users\dyc\Desktop\组会\2018.9.12\1536714263892.png)
+![1536714263892](./1536714263892.png)
 
 
 
@@ -38,7 +38,7 @@ They fall into two broad classes, agglomerative and divisive , depending on whet
 
 ours differ in focusing not on removing the edges between vertex pairs with the lowest similarity, but on finding edges with the highest ‘‘between- ness,’’ where betweenness is some measure that favors edges that lie between communities and disfavors those that lie inside communities.
 
-![1536717284845](C:\Users\dyc\Desktop\组会\2018.9.12\1536717284845.png)
+![1536717284845](./1536717284845.png)
 
 ## the general form of our community structure findingalgorithm is as follows
 
@@ -56,7 +56,7 @@ ours differ in focusing not on removing the edges between vertex pairs with the 
 
 
 
-![1536716119246](C:\Users\dyc\Desktop\组会\2018.9.12\1536716119246.png)
+![1536716119246](./1536716119246.png)
 
 1.We find first the ‘‘leaves’’ of the tree, i.e., those nodes such that no shortest paths to other nodes pass through them, and we assign a score of 1 to the single edge that connects each to the rest of the tree, as shown in the figure. Then, starting with those edges that are farthest from the source vertex on the tree,, we work upwards, assigning a score to each edge that is 1 plus the sum of the scores on the neighboring edges immediately below it (i.e., those edges with which it shares a common vertex). When we have gone though all edges in the tree, the resulting scores are the betweenness counts for the paths from vertex s. Repeating the process for all possible vertices s and summing the scores, we arrive at the full betweenness scores for shortest paths between all pairs. 
 
