@@ -91,7 +91,7 @@ ours differ in focusing not on removing the edges between vertex pairs with the 
 
 
 
-$$Q=\sum_{i}{(e_{ii}-a_i)^2}=T_re-{||e^2||}$
+![1536720085730](./1536720085730.png)
 
 Let us define a k*k symmetric matrix e whose element eij is the fraction of all edges in the network that link verti- ces in community i to vertices in community j
 
