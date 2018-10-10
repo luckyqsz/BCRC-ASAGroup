@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 ---
-
-
-typora-copy-images-to: work_record
 typora-root-url: ./
+typora-copy-images-to: work_record
 ---
 
-待完成事项置顶：
+**待完成事项置顶：**
 
 * 中山医院病人步态检测
 * openpose在服务器上跑通
@@ -14,7 +11,93 @@ typora-root-url: ./
 * 优化步态算法
 * 看论文
 
+# 20181003-20181009
+
+一个课上的PJ写了一个假期，效率及其低下……我觉得我应该利用这一晚上好好看看论文了。
+
+### CVPR2018论文分析解读：
+
+cvpr2018论文分析: https://zhuanlan.zhihu.com/p/35131736
+
+#### 目标检测方向：
+
+目标检测综述：https://www.zhihu.com/people/YaqiLYU/activities
+
+论文整理(近五年): https://github.com/hoya012/deep_learning_object_detection#2014
+
+![img](https://github.com/hoya012/deep_learning_object_detection/raw/master/assets/deep_learning_object_detection_history.PNG)
+
+CVPR2018:
+
+#### video action方向：
+
+概括： https://www.zhihu.com/question/266379600
+
+必看：Non-local Nerual Networks
+
+#### 语音识别方向：
+
+好了，我又决定要看书了，好迷茫，好纠结……
+
+# 20180926-20181002
+
+再次不知道干了些啥
+
+# 20180920-20180926
+
+我也不知道我干了些啥……心烦意乱
+
+# 20180913-20180919
+
+* 给每个人服务器开账户
+* 给外星人安装环境并且去运行程序
+* 程序改进
+* 实验室测试
+* 中山医院测试
+* 看一下word embedding
+
+## 调研工研院
+
+![1536813606059](/work_record/1536813606059.png)
+
+![1536819090529](/work_record/1536819143170.png)
+
+## VS code使用
+
+决定弃坑spyder，实在太难用了，实用王承斌全力推荐的VS code。
+
+* 学习vscode
+  * 快捷键： [keyboard use](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+  * 很好用的一个extension：dark one（icon theme），eslint（for debugging），markdown all in one
+  * 常用快捷键：
+    * f5:运行
+    * ctrl+/多行注释
+* 修改后台数据库
+* 修改代码
+
+## 系统搭建工作
+
+* 实验室系统搭建，发现问题：
+  * 客户端返回uuid无法正确对接（已解决）
+  * 算法监控设备没有网络会报错，连接网络不能重新找到待处理数据（已解决）
+  * 算法运行速度慢
+    * 已用外星人GPU，速度提升了很多
+    * 计划用实验室GPU
+  * 算法准确度
+    * 考察openpose
+    * 考虑王承斌代码
+    * 考虑densepose
+
+[1536849284115](/work_record/1536849284115.png)
+
+
+
+
+
+
+
 # 20180907-20180912
+
 * 重装系统，貌似完成了，大家可以test一下
 * 优化步态识别代码
   * 简单的异常处理
