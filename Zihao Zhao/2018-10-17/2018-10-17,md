@@ -1,0 +1,75 @@
+# Warping and morphing
+
+## 小鼠神经重建项目
+
+何苗老师提了三个层次的需求。
+
+1. 标准脑切片模板和鼠脑切片图片人工一一对应标准脑切片模板和鼠脑切片图片人工一一对应。
+2. 点击分区，自动识别出胞体数量。
+3. 将2D自动识别好的鼠脑切片图片重构成3D立体模型。
+
+## 一些尝试
+
+![](./2.png)
+
+- [x] 使用简单的预处理和轮廓寻找算法提取出大脑切片的轮廓，轮廓有毛刺，尚未平滑。
+
+  ```python
+  cv2.threshold(img_res,40,255,cv2.THRESH_BINARY)  #阈值二值化
+  cv2.dilate(thresh,kernel,iterations = 1)		#膨胀
+  cv2.erode(thresh2,kernel,iterations = 1)		#腐蚀
+  cv2.findContours(closing,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)    #寻找轮廓
+  ```
+
+- [x] 在alan图谱中手动找出最接近的一副图，也识别出其轮廓。（两个轮廓均由约3000个特征点构成。）
+
+  若要自动寻找最相近的图片，简单实现可以用OpenCV自带库可以计算轮廓的**Hu矩**，用来粗略比对轮廓相似性。
+
+  ![](/home/zzh/Note/2018-10-17/3.png)
+
+- [ ] 通过寻找点间的对应关系，将两幅图进行混合（image blending）。
+
+![](./1.png)
+
+![](./4.png)
+
+可优化之处：
+
+- [ ] 轮廓提取
+- [ ] 轮廓平滑
+- [ ] 轮廓相似度计算
+
+
+
+
+
+## 关于胞体识别的一些想法
+
+传统CV确定候选区域+CNN二分类模型
+
+
+
+
+
+# KCF算法
+
+online visual tracking算法：TLD,Struck,OAB,CT.  其中TLD,Struck稍好。
+
+## 1 实现效果
+
+![](./a.gif)
+
+![](./b.gif)
+
+
+
+## 2 论文思路&实现流程
+
+在第一帧中确定感兴趣的区域。
+
+计算该区域的Hog特征。
+
+
+
+
+
