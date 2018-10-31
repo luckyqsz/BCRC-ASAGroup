@@ -30,7 +30,7 @@ This talk centered on Hamming's contributions and research on the question "**Wh
 
 **Simple Rules for Doing Your Best Research**
 
-1. **Drop modesty **
+1. **Drop modesty**
 
    I would like to do first-class work or do something significant. 
 
