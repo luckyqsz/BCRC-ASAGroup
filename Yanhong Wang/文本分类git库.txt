@@ -1,0 +1,3 @@
+中文文本分类对比（经典方法和CNN）
+文章内容：https://www.jianshu.com/p/dc00a5d597ed
+Git库URL：https://github.com/Edward1Chou/Textclassification
