@@ -1,5 +1,14 @@
 # Source: https://github.com/yunjey/pytorch-tutorial/tree/master/tutorial/03-advanced/generative_adversarial_network/
 # Tasteful coding style worth learning and imitating.
+# PyTorch pros&cons
+# Pros:
+# Built-in data loading and augmentation, very nice!
+# Training is fast, maybe even a little bit faster.
+# Very memory efficient!
+# Cons:
+# No progress bar, sad :(
+# No built-in log.
+
 
 import os
 import torch
@@ -72,7 +81,7 @@ g_optimizer = torch.optim.Adam(G.parameters(), lr=0.0002)
 
 def denorm(x):
     out = (x + 1) / 2
-    return out.clamp(0, 1)
+    return out.clamp(0, 1)	# The output of G(z) in the range (-1, 1), so change it in the range (0, 1).
 
 def reset_grad():
     d_optimizer.zero_grad()
@@ -109,7 +118,7 @@ for epoch in range(num_epochs):
         d_loss_fake = criterion(outputs, fake_labels)
         fake_score = outputs
         
-        # Backprop and optimize
+        # Back propagation and optimize
         d_loss = d_loss_real + d_loss_fake  # Positive and negative samples are equal in a batch during training the classifier.
         reset_grad()
         d_loss.backward()
