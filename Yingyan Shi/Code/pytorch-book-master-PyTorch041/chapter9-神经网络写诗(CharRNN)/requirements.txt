@@ -1,0 +1,6 @@
+git+https://github.com/pytorch/tnt.git@master
+fire
+ipdb
+torchvision
+visdom
+tqdm
