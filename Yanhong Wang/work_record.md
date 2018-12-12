@@ -1,22 +1,44 @@
 
 
-[TOC]
-
 
 
 # Week Work Report:
 
-# 20181121-20181126
+# 20181205-20181211
+
+## 完成工作
+
+1. 看论文
+    | 序号 | 题目                              | 作者             | 期刊      |
+    | ---- | --------------------------------- | ---------------- | --------- |
+    | 1    | Deformable Convolutional Networks | Jifeng Dai, MSRA | ICCV 2017 |
+2. [完成步态数据处理](#步态进度)
+
+# 20181128-20181204
+
+## 完成工作
+
+1. 看论文
+
+   | 序号 | 题目                                                 | 作者                            | 期刊      |
+   | ---- | ---------------------------------------------------- | ------------------------------- | --------- |
+   | 1    | RMPE: Regional Multi-person Pose Estimation          | Fang Hao, Shu Lu Cewu, SJTU     | ICCV 2017 |
+   | 2    | Stacked Hourglass Networks for Human Pose Estimation | CM(University of Michigan) CUHK | CVPR 2016 |
+   | 3    | Learning Feature Pyramids for Human Pose Estimation  | Wei Yang, CUHK                  | ICCV 2017 |
+
+2. 可重构计算课程报告
+
+# 20181121-20181127
 
 ## 步态项目
 
-### 进度
+### <span id="步态进度">进度</span>
 
 | 序号 | 时间     | 进度                             | 备注 |
 | ---- | -------- | -------------------------------- | ---- |
 | 1    | 20181123 | 增加到200病人，其中151病人有标签 |      |
 | 2    | 20181123 | 用151数据进行训练，效果不明显    |      |
-|      |          |                                  |      |
+| 3    | 20181212 | 增加351-388数据                  |      |
 
 ### 细节
 
