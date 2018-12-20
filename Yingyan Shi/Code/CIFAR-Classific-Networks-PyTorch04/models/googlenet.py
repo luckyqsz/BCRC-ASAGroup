@@ -51,11 +51,14 @@ class Inception(nn.Module):
         y2 = self.b2(x)
         y3 = self.b3(x)
         y4 = self.b4(x)
-        return torch.cat([y1,y2,y3,y4], 1)  # concatenate all branches
+        return torch.cat([y1,y2,y3,y4], 1)  # concatenate all branches, (bs,c,h,w)
+        # torch.cat(inputs, dim=0) -> tensor
+        # inputs(sequence of Tensors), dimension(int, optional)
+        # concatenate sequence of Tensors along the specified dimension
 
 
 class GoogLeNet(nn.Module):
-    def __init__(self):
+    def __init__(self):  # construction function
         super(GoogLeNet, self).__init__()
         self.pre_layers = nn.Sequential(
             nn.Conv2d(3, 192, kernel_size=3, padding=1),
@@ -101,7 +104,8 @@ class GoogLeNet(nn.Module):
 
 def test():
     net = GoogLeNet()
-    x = torch.randn(1,3,32,32)
+    x = torch.randn(1,3,32,32)  
+    # Note that batch size has to be specified, so input has to be a 4-dimensional tensor.
     y = net(x)
     print(y.size())
 
