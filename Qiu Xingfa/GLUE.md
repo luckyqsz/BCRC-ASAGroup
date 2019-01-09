@@ -74,7 +74,7 @@
 
 |index|	genre|	filename|	year|	old_index|	source1|	source2|	sentence1|	sentence2|	score|
 |:---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-|0|	main-captions|	MSRvid|	2012test|	|0001|	none|	none|	A plane is taking off.|	An air plane is taking off.|5.000|
+|0|	main-captions|	MSRvid|	2012test|	0001|	none|	none|	A plane is taking off.|	An air plane is taking off.|5.000|
 |1	|main-captions|	MSRvid|	2012test|	0004|	none|	none|	A man is playing a large flute.|	A man is playing a flute.|	3.800|
 
 6. [MNLI](http://www.nyu.edu/projects/bowman/multinli/)（The Multi-Genre Natural Language Inference Corpus）[data](https://firebasestorage.googleapis.com/v0/b/mtl-sentence-representations.appspot.com/o/data%2FMNLI.zip?alt=media&token=50329ea1-e339-40e2-809c-10c40afff3ce) <br>
