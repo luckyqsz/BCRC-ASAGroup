@@ -6,7 +6,8 @@
 [GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding](https://arxiv.org/pdf/1804.07461.pdf)
 * website<br>
 [gluebenchmark](https://gluebenchmark.com/)<br>
-[GLUE-baselines](https://github.com/nyu-mll/GLUE-baselines)
+[GLUE-baselines](https://github.com/nyu-mll/GLUE-baselines)<br>
+注：在[GLUE排行榜](https://gluebenchmark.com/leaderboard)上,模型Microsoft D365 AI & MSR AI十一项任务中有九项超越BERT<br>
 * dataset [下载](https://pan.baidu.com/s/1hnVEQdxLZbR_noX9kmeGoA)<br>
 ![](https://github.com/qiuxingfa/picture_/blob/master/2019/61b84cdaf5188798004c942e59ffe47.png)<br>
 <br>
