@@ -1,10 +1,10 @@
-﻿# GLUE
+# GLUE
 
 ---
 
-* paper
+* paper<br>
 [GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding](https://arxiv.org/pdf/1804.07461.pdf)
-* website
+* website<br>
 [gluebenchmark](https://gluebenchmark.com/)<br>
 [GLUE-baselines](https://github.com/nyu-mll/GLUE-baselines)
 * dataset [下载](https://pan.baidu.com/s/1hnVEQdxLZbR_noX9kmeGoA)<br>
