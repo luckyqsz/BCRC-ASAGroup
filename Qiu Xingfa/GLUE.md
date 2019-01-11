@@ -83,7 +83,7 @@
 **T/D/V**：7k/1.5k/1.4k<br>
 **来源**：新闻提要，视频和图片注释等<br>
 **任务**：判断一对问题语义是否相同<br>
-**类别**：相似度分数1-5 <br>
+**类别**：相似度分数0-5 <br>
 **评估**：Pearson and Spearman correlation coefficients（相关系数）<br>
 **示例**：<br>
 
