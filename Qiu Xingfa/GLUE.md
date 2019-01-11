@@ -26,6 +26,9 @@
 | gj04  | 1 |  | Our friends won't buy this analysis, let alone the next one we propose. | 
 | gj04   | 0  | *  | They drank the pub.  | 
 
+**数据**：<br>
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_1.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_len.jpg)
 2. [SST-2](https://nlp.stanford.edu/sentiment/index.html)（The Stanford Sentiment Treebank）[data](https://firebasestorage.googleapis.com/v0/b/mtl-sentence-representations.appspot.com/o/data%2FSST-2.zip?alt=media&token=aabc5f6b-e466-44a2-b9b4-cf6337f84ac8) <br>
 **T/D/V**：67k/872/1.8k<br>
 **来源**：电影评论<br>
@@ -39,6 +42,9 @@
 |contains no wit , only labored gags | 	0|
 |that loves its characters and communicates something rather beautiful about human nature| 	1|
 
+**数据**：<br>
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_label.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_len_1.jpg)
 3. [MRPC](https://www.microsoft.com/en-us/download/details.aspx?id=52398)（The Microsoft Research Paraphrase Corpus）[data](https://firebasestorage.googleapis.com/v0/b/mtl-sentence-representations.appspot.com/o/data%2Fmrpc_dev_ids.tsv?alt=media&token=ec5c0836-31d5-48f4-b431-7480817f1adc)<br>
 **T/D/V**：3.7k/408/1.7k<br>
 **来源**：网络新闻<br>
@@ -52,6 +58,10 @@
 |1 | 702876|702977|Amrozi accused his brother , whom he called " the witness " , of deliberately distorting his evidence .| 	Referring to him as only " the witness " , Amrozi accused his brother of deliberately distorting his evidence .|
 |0 | 264589|264502|The Nasdaq had a weekly gain of 17.27 , or 1.2 percent , closing at 1,520.15 on Friday .| 	The tech-laced Nasdaq Composite .IXIC rallied 30.46 points , or 2.04 percent , to 1,520.15 .|
 
+**数据**：<br>
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_labe.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_len1.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_len2.jpg)
 4. [QQP](https://data.quora.com/First-Quora-Dataset-Release-Question-Pairs)（The Quora Question Pairs）[data](https://firebasestorage.googleapis.com/v0/b/mtl-sentence-representations.appspot.com/o/data%2FQQP.zip?alt=media&token=700c6acf-160d-4d89-81d1-de4191d02cb5)<br>
 **T/D/V**：364k/40k/391k<br>
 **来源**：Quora<br>
@@ -65,6 +75,10 @@
 |133273 | 213221|213222|How is the life of a math student?Could you describe your own experiences?|Could you describe your own experiences?|0|
 |402555| 536040|536041|How do I control my horny emotions?|How do you control your horniness?|1|
 
+**数据**：<br>
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_lbel.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_ln_1.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_ln_2.jpg)
 5. [STS-B](http://ixa2.si.ehu.es/stswiki/index.php/STSbenchmark) （The Semantic Textual Similarity Benchmark）[data](https://firebasestorage.googleapis.com/v0/b/mtl-sentence-representations.appspot.com/o/data%2FSTS-B.zip?alt=media&token=bddb94a7-8706-4e0d-a694-1109e12273b5) <br>
 **T/D/V**：7k/1.5k/1.4k<br>
 **来源**：新闻提要，视频和图片注释等<br>
@@ -78,6 +92,10 @@
 |0|	main-captions|	MSRvid|	2012test|	0001|	none|	none|	A plane is taking off.|	An air plane is taking off.|5.000|
 |1	|main-captions|	MSRvid|	2012test|	0004|	none|	none|	A man is playing a large flute.|	A man is playing a flute.|	3.800|
 
+**数据**：<br>
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_abel.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_en_1.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_en_2.jpg)
 6. [MNLI](http://www.nyu.edu/projects/bowman/multinli/)（The Multi-Genre Natural Language Inference Corpus）[data](https://firebasestorage.googleapis.com/v0/b/mtl-sentence-representations.appspot.com/o/data%2FMNLI.zip?alt=media&token=50329ea1-e339-40e2-809c-10c40afff3ce) <br>
 **T/D/V**：393k/20k/20k<br>
 **来源**：演讲，小说，政府报告等<br>
@@ -90,6 +108,11 @@
 |:---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 |0	|31193|	31193n|	government|( ( Conceptually ( cream skimming ) ) ( ( has ( ( ( two ( basic dimensions ) ) - ) ( ( product and ) geography ) ) ) . ) )|( ( ( Product and ) geography ) ( ( are ( what ( make ( cream ( skimming work ) ) ) ) ) . ) )|(ROOT (S (NP (JJ Conceptually) (NN cream) (NN skimming)) (VP (VBZ has) (NP (NP (CD two) (JJ basic) (NNS dimensions)) (: -) (NP (NN product) (CC and) (NN geography)))) (. .)))|(ROOT (S (NP (NN Product) (CC and) (NN geography)) (VP (VBP are) (SBAR (WHNP (WP what)) (S (VP (VBP make) (NP (NP (NN cream)) (VP (VBG skimming) (NP (NN work)))))))) (. .)))|Conceptually cream skimming has two basic dimensions - product and geography.|Product and geography are what make cream skimming work. |neutral|neutral|
 |5|	110116|	110116e|	telephone|( ( my walkman ) ( broke ( so ( i ( 'm ( upset ( now ( i ( just ( have ( to ( ( turn ( the stereo ) ) ( up ( real loud ) ) ) ) ) ) ) ) ) ) ) ) ) )|( ( ( ( I ( 'm ( upset ( that ( ( my walkman ) broke ) ) ) ) ) and ) ( now ( I ( have ( to ( ( turn ( the stereo ) ) ( up ( really loud ) ) ) ) ) ) ) ) . )|(ROOT (S (NP (PRP$ my) (NN walkman)) (VP (VBD broke) (SBAR (IN so) (S (NP (FW i)) (VP (VBP 'm) (ADJP (VBN upset) (SBAR (RB now) (S (NP (FW i)) (ADVP (RB just)) (VP (VBP have) (S (VP (TO to) (VP (VB turn) (NP (DT the) (NN stereo)) (ADVP (RB up) (RB real) (JJ loud)))))))))))))))|(ROOT (S (S (NP (PRP I)) (VP (VBP 'm) (ADJP (VBN upset) (SBAR (IN that) (S (NP (PRP my) (NN walkman)) (VP (VBD broke))))))) (CC and) (S (ADVP (RB now)) (NP (PRP I)) (VP (VBP have) (S (VP (TO to) (VP (VB turn) (NP (DT the) (NN stereo)) (ADVP (RB up) (RB really) (JJ loud))))))) (. .)))|How do you know? All this is their information again.|This information belongs to them.|entailment|entailment|
+
+**数据**：<br>
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_lael.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_le_1.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/data_le_2.jpg)
 7. [SNLI](https://firebasestorage.googleapis.com/v0/b/mtl-sentence-representations.appspot.com/o/data%2FSNLI.zip?alt=media&token=4afcfbb2-ff0c-4b2d-a09a-dbf07926f4df)（论文未提）<br>
 8. [QNLI](https://rajpurkar.github.io/SQuAD-explorer/) （The Stanford Question Answering Dataset）[data](https://firebasestorage.googleapis.com/v0/b/mtl-sentence-representations.appspot.com/o/data%2FQNLI.zip?alt=media&token=c24cad61-f2df-4f04-9ab6-aa576fa829d0)<br>
 **T/D/V**：108k/5.7k/5.7k<br>
@@ -103,6 +126,11 @@
 |:---:|---:|---:|---:|
 |0	|What is the Grotto at Notre Dame?|	Immediately behind the basilica is the Grotto, a Marian place of prayer and reflection.|	entailment|
 |1	|What is the Grotto at Notre Dame?|	It is a replica of the grotto at Lourdes, France where the Virgin Mary reputedly appeared to Saint Bernadette Soubirous in 1858.|	not_entailment|
+
+**数据**：<br>
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/ata_label.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/ata_len_1.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/ata_len_2.jpg)
 9. [RTE](https://aclweb.org/aclwiki/Recognizing_Textual_Entailment) （The Recognizing Textual Entailment）[data](https://firebasestorage.googleapis.com/v0/b/mtl-sentence-representations.appspot.com/o/data%2FRTE.zip?alt=media&token=5efa7e85-a0bb-4f19-8ea2-9e1840f077fb)<br>
 **T/D/V**：2.5k/276/3k<br>
 **来源**：news and Wikipedia text<br>
@@ -115,6 +143,11 @@
 |:---:|---:|---:|---:|
 |0|	No Weapons of Mass Destruction Found in Iraq Yet.|	Weapons of Mass Destruction Found in Iraq.|	not_entailment|
 |1|	A place of sorrow, after Pope John Paul II died, became a place of celebration, as Roman Catholic faithful gathered in downtown Chicago to mark the installation of new Pope Benedict XVI.|	Pope Benedict XVI is the new leader of the Roman Catholic Church.|	entailment|
+
+**数据**：<br>
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/datalabel.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/datalen_1.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/datalen_2.jpg)
 10. [WNLI](https://cs.nyu.edu/faculty/davise/papers/WinogradSchemas/WS.html)（The Winograd Schema Challenge）（bert表格中没有）[data](https://firebasestorage.googleapis.com/v0/b/mtl-sentence-representations.appspot.com/o/data%2FWNLI.zip?alt=media&token=068ad0a0-ded7-4bd7-99a5-5e00222e0faf)<br>
 **T/D/V**：634/71/146<br>
 **来源**：小说<br>
@@ -127,6 +160,10 @@
 |:---:|---:|---:|---:|
 |0	|I stuck a pin through a carrot. When I pulled the pin out, it had a hole.|	The carrot had a hole.|	1|
 |3	|Steve follows Fred's example in everything. He influences him hugely.|	Steve influences him hugely.|	0|
+
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/dta_label.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/dta_len_1.jpg)
+![](https://github.com/qiuxingfa/picture_/blob/master/2019/GLUE/dta_len_2.jpg)
 11. [diagnostic](https://gluebenchmark.com/diagnostics) |[data](https://goo.gl/dJ5GR4)<br>
 
 |Lexical Semantics|	Predicate-Argument Structure|	Logic|	Knowledge|	Domain|	Premise	|Hypothesis|	Label|
