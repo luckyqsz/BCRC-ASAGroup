@@ -1,0 +1,5 @@
+apple 10 3
+tesla 100000 1
+linux 3000 2
+lenovo 30000 3
+chicken 10 3
