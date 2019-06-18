@@ -38,3 +38,18 @@ No change at all.
 
 
 
+## lab 2
+
+Implementation version lab_8
+
+The pose attribute changes as required preliminarily.
+
+loss coefficients: loss_rec 4000
+
+The generated images tend to be blurry and lose detailed texture.
+
+The adversarial training is performed without total variation regularization and Light-CNN identity preserving constraint.
+
+![](./image_result/AFW/valid_200000.png)
+
+![](./image_result/AFW/loss_visualization_2.png)
