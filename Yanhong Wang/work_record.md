@@ -1,3 +1,5 @@
+[TOC]
+
 # Week Work Report:
 
 # 20181212-20181218
@@ -375,9 +377,8 @@ CVPR2018:
 - **demo：**
 
   <iframe width="920" height="518" src="https://www.youtube.com/embed/HgDdaMy8KNE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-  ![20180905_1](./work_record/20180905_1.png)
-
+![20180905_1](./work_record/20180905_1.png)
+  
 - features：**
 
   - **cross-modal and multi-modal learning** ,无法对无线信号进行标注，所以通过同步的视频信号提取人体姿势信息来，再完成监督无线信号到姿势信息的训练。训练完成后，就可以直接由无线信号得到人体姿势信息。
@@ -494,7 +495,6 @@ CVPR2018:
 
 
   <iframe width="920" height="518" src="https://www.youtube.com/embed/HgDdaMy8KNE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
 * features：
 
   * cross-modal and multi-modal learning 无法对无线信号进行标注，所以通过同步的视频信号提取人体姿势信息来，再完成监督无线信号到姿势信息的训练。训练完成后，就可以直接由无线信号得到人体姿势信息。
@@ -831,9 +831,8 @@ typora-root-url: ./
 - **demo：**
 
   <iframe width="920" height="518" src="https://www.youtube.com/embed/HgDdaMy8KNE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-  ![20180905_1](./work_record/20180905_1.png)
-
+![20180905_1](./work_record/20180905_1.png)
+  
 - features：**
 
   - **cross-modal and multi-modal learning** ,无法对无线信号进行标注，所以通过同步的视频信号提取人体姿势信息来，再完成监督无线信号到姿势信息的训练。训练完成后，就可以直接由无线信号得到人体姿势信息。
@@ -950,7 +949,6 @@ typora-root-url: ./
 
 
   <iframe width="920" height="518" src="https://www.youtube.com/embed/HgDdaMy8KNE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
 * features：
 
   * cross-modal and multi-modal learning 无法对无线信号进行标注，所以通过同步的视频信号提取人体姿势信息来，再完成监督无线信号到姿势信息的训练。训练完成后，就可以直接由无线信号得到人体姿势信息。
@@ -1395,9 +1393,8 @@ CVPR2018:
 - **demo：**
 
   <iframe width="920" height="518" src="https://www.youtube.com/embed/HgDdaMy8KNE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-  ![20180905_1](./work_record/20180905_1.png)
-
+![20180905_1](./work_record/20180905_1.png)
+  
 - features：**
 
   - **cross-modal and multi-modal learning** ,无法对无线信号进行标注，所以通过同步的视频信号提取人体姿势信息来，再完成监督无线信号到姿势信息的训练。训练完成后，就可以直接由无线信号得到人体姿势信息。
@@ -1514,7 +1511,6 @@ CVPR2018:
 
 
   <iframe width="920" height="518" src="https://www.youtube.com/embed/HgDdaMy8KNE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
 * features：
 
   * cross-modal and multi-modal learning 无法对无线信号进行标注，所以通过同步的视频信号提取人体姿势信息来，再完成监督无线信号到姿势信息的训练。训练完成后，就可以直接由无线信号得到人体姿势信息。
@@ -1851,9 +1847,8 @@ typora-root-url: ./
 - **demo：**
 
   <iframe width="920" height="518" src="https://www.youtube.com/embed/HgDdaMy8KNE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-  ![20180905_1](./work_record/20180905_1.png)
-
+![20180905_1](./work_record/20180905_1.png)
+  
 - features：**
 
   - **cross-modal and multi-modal learning** ,无法对无线信号进行标注，所以通过同步的视频信号提取人体姿势信息来，再完成监督无线信号到姿势信息的训练。训练完成后，就可以直接由无线信号得到人体姿势信息。
@@ -1970,7 +1965,6 @@ typora-root-url: ./
 
 
   <iframe width="920" height="518" src="https://www.youtube.com/embed/HgDdaMy8KNE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
 * features：
 
   * cross-modal and multi-modal learning 无法对无线信号进行标注，所以通过同步的视频信号提取人体姿势信息来，再完成监督无线信号到姿势信息的训练。训练完成后，就可以直接由无线信号得到人体姿势信息。
