@@ -1,0 +1,33 @@
+linux命令
+1. wget[参数][URL地址], wget是linux的一个下载工具，支持下载http, https, ftp。wget非常稳定，如果是因为网络原因导致下载失败，会再次链接到
+   下载中断的地方下载。且wget可以自动下载，即启动一个下载任务，然后退出系统，wget会在后台执行知道任务完成。
+   https://www.cnblogs.com/peida/archive/2013/03/18/2965369.html
+2. tar用于备份文件
+   tar -czvf [新文件名] [原来的文件名]          压缩文件
+   tar -xzvf [待解压的文件名] 解压文件
+3. conda一些常用命令：
+   conda list 查看安装了哪些包
+   conda env list 查看当前存在哪些包
+   创建anaconda虚拟环境：
+   1)conda create -n name python=x.x  创建python版本为x.x, 名字为name的虚拟环境
+   2)source activate name   linux下激活虚拟环境
+   3)conda install -n name [package]  在name虚拟环境下安装包
+   4)source deactivate 关闭虚拟环境
+   5)conda remove --name package 删除虚拟环境中的某个包
+   6)conda remove -n name --all 删除整个虚拟环境
+4. 从服务器上下载文件
+   scp username@serverip:/path
+   下载文件夹
+   scp -r username@serverip:/path
+   上传本地文件到服务器
+   scp /path username@serverip:/path
+   上传文件夹到服务器
+   scp -r /path username@serverip:/path
+5. 新建文件夹
+   mkdir foldername
+   删除文件夹
+   rmdir foldername
+   新建文件
+   touch a.txt
+   删除文件
+   rm a.txt
