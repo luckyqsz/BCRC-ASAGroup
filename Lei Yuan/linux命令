@@ -23,14 +23,23 @@ linux命令
    scp /path username@serverip:/path
    上传文件夹到服务器
    scp -r /path username@serverip:/path
-5. 新建文件夹
+5. 文件夹操作
+   新建文件夹
    mkdir foldername
+   
    删除文件夹
    rmdir foldername
    新建文件
    touch a.txt
    删除文件
    rm a.txt
+   
+   复制命令 cp
+   cp [选项] 源文件或目录 目标文件或目录
+      选项有-f 删除已经存在的目标文件而不提示 -i提示是否要覆盖 -r拷贝的是一目录文件
+   
+   移动命令mv
+   mv [选项] 源文件或目录 目标文件或目录
 6. sh
 7. cd命令
    cd ～ 表示进入home目录
