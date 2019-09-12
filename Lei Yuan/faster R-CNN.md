@@ -8,7 +8,7 @@
 
 ​    注: faster rcnn只是对产生候选区域的网络进行了改进(selective search --> RPN），其余都是沿用fast rcnn网络。
 
-![](/home/lei/Desktop/screenshot_4.png)
+![](./image/screenshot_4.png)
 
 ​	RPN提出了"anchor"(就是一组（原文为9个，三种尺度，三种宽长比）尺度不一样的框，尺度不一样是为了解决目标尺度问题，相比于之前的图像金字塔以及filter金字塔，anchor的计算开销更小），feature map上的每个点都对应于anchor的中心点(相当于在原图上画了很多个尺度不一样的框)。
 
@@ -20,11 +20,11 @@
 
 修正的方法 
 
-![](/home/lei/Desktop/149841641.jpg)
+![](./image/149841641.jpg)
 
 训练RPN网络的框架图
 
-![](/home/lei/Desktop/screenshot_5.png)
+![](./image/screenshot_5.png)
 
 然后添加proposal层，将cls与box联合起来输出为候选框和分数，多目标损失函数 L = L_cls + lamda*L_reg, L_cls采用的是log损失，L_reg采用的是L1损失，即坐标差的绝对值。
 
