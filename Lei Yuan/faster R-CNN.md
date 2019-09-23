@@ -12,13 +12,13 @@
 
 ### Faster R-CNN完整流程
 
-![](./image/screenshot_6.png)
+![](../image/screenshot_6.png)
 
 ​	上图标注了faster Rcnn 的步骤，可见，RPN与后续的fast rcnn是有交叠的，即提取feature map（vgg or resnet等网络完成）部分，这也就是论文中说的share部分。
 
 ### RPN网络
 
-![](./image/screenshot_7.png)
+![](../image/screenshot_7.png)
 
 ​	RPN就是先通过vgg或者resnet提取feature map，然后在feature map上应用anchors，再将feature map再进行一步卷积操作得到share map。最后再以share map作为输入训练cls与reg。（可以理解为将anchors作为输入）
 
@@ -34,11 +34,11 @@
 
 修正的方法 
 
-![](./image/149841641.jpg)
+![](../image/149841641.jpg)
 
 训练RPN网络的框架图
 
-![](./image/screenshot_5.png)
+![](../image/screenshot_5.png)
 
 ##### 联合分类与回归的loss function
 
