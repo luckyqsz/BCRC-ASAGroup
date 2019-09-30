@@ -6,11 +6,11 @@
 
 ​	作者认为目标检测技术现在性能比较好，不需要任何复杂的跟踪网络，提出了一个完全依赖检测的结果的跟踪方法。具体怎么做呢，检测会得到一个个目标的选框，计算当前帧与上一帧的哪个目标IOU更高，认为他们在一个track内。
 
-![](/home/lei/Pictures/iou1.png)
+![](https://github.com/luckyqsz/BCRC-ASAGroup/blob/master/Lei%20Yuan/image/iou1.png)
 
 ​		因为这种方法完全依赖于检测，所以对检测有两个要求：1. 每一帧中的目标都要能检测出来，即中间不会断帧，目标是连续的。2. 对于同一个目标，在连续的帧中要有很高的IOU。（也就是说这个检测器要有很高的recalling，precision；且目标的移动速度，变化要很低）。
 
-![](/home/lei/Pictures/iou2.png)	
+![](https://github.com/luckyqsz/BCRC-ASAGroup/blob/master/Lei%20Yuan/image/iou2.png)	
 
 ​	首先设定检测阈值1, 对于所有检测结果，只保留检测分大于阈值1的，然后对于每一个检测对象，计算它与上一帧对象的IOU，判断最高iou是否大于阈值2，如果大于，则将该目标归于该track；否则判断上一个目标与上上一个匹配对象的iou是否大于阈值3，如果大于，且该track长度也大于track的最小长度，则认为该track跟踪的目标已经移出镜头，该track结束。对于那些匹配不成功的则认为他们是新目标，新开一条track进行跟踪。
 
@@ -35,7 +35,7 @@ IDs为什么很高的分析，见iou的评价部分，主要是漏检FN造成的
 
 ## 性能的改进
 
-![](/home/lei/Pictures/iou3.png)
+![](https://github.com/luckyqsz/BCRC-ASAGroup/blob/master/Lei%20Yuan/image/iou3.png)
 
 ​	可以看到v-iou相比与iou，IDs确实大幅度下降，不过FP轻微上升，这是合并过度导致的，速度也降低了两个数量级。
 
