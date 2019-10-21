@@ -19,11 +19,11 @@
 
 从常规卷积 -> 典型的Inception -> 简化的Inception -> “极限”Inception，实际上是输入通道分组的一个变化过程。常规卷积可看做将输入通道当做整体，不做任何分割；Inception则将通道分割成3至4份，进行3×3的卷积操作；“极限”Inception则每一个通道都对应一个3×3的卷积。这样每个通道可以完全独立，将通道间关系和空间关系完全解耦
 
-![3-2](C:\Users\JY\Desktop\GitHub&论文\论文\3Xception模型_summary\3-2.png)
+![3-2](../image/3-2.png)
 
 引入深度可分离卷积的 Inception，即Xception（Extreme Inception），其结构图如下。Xception 架构共使用了 36 个 depthwise separable 卷积来提取来构成基本的特征提取器。36 个卷积层被拆分成 14 个模块，所有的模块都使用残差连接（除了第一个和最后一个模块） 
 
-![3-1](C:\Users\JY\Desktop\GitHub&论文\论文\3Xception模型_summary\3-1.png)
+![3-1](../image/3-1.png)
 
 ### 三、思考
 
