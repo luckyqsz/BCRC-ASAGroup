@@ -8,13 +8,13 @@ IOU-Net
 
 ​	本文在最终打分的阶段引入了位置方面的参考，使得bbox的位置更加准确。作者提出的方法可以应用到其他检测网络中，AP可以提升1个点左右，效果不算显著但是很新颖。
 
-![iou1](/home/lei/Desktop/iou1.png)
+![iou1](../image/iou1.png)
 
 解决方法
 
 2.1 网络结构
 
-![iou2](/home/lei/Desktop/iou2.png)
+![iou2](../image/iou2.png)
 
 ​	在常规检测网络的基础上增加IOU预测分支。
 
