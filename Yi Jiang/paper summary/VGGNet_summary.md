@@ -16,11 +16,11 @@
 
 VGG结构图：
 
-![4-1](C:\Users\JY\Desktop\GitHub&论文\论文\VGG模型论文\4-1.png)
+![4-1](../image/4-1.png)
 
 ConvNet Configuration：
 
-![4-2](C:\Users\JY\Desktop\GitHub&论文\论文\VGG模型论文\4-2.png)
+![4-2](../image/4-2.png)
 
 ### 三、思考
 
