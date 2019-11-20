@@ -653,6 +653,7 @@ queryable topic tracking (DiaQueTT)
 * 将输入词的相似度的直方图分布作为输入
 * representation-focused的模型效果比传统的方法效果要差
 <br>
+
 * 可以参考匹配的思路进行事件聚类
 
 ---
@@ -662,4 +663,5 @@ queryable topic tracking (DiaQueTT)
 * 使用动态池化策略来解决文本长度不一致的问题
 * 在释义识别和论文引用匹配两个数据集上测试
 <br>
+
 * 使用匹配信号而不是文本作为输入，使得模型更加灵活
