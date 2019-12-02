@@ -31,7 +31,7 @@
 
 ####   2.3 network framework
 
-![](/home/lei/Desktop/bgb1.png)
+![](..image/bgb1.png)
 
 ​	  值得注意的是TGM： exemplar先通过ROI， conv得到C×1×1的特征向量（图b中黄色的细长条feature），然后将此特征向量与query image进行元素乘得到图b绿色的feature map（与siamPoint类似），该特征向量上采样得到黄色的feature map，再加上query三张feature经过1×1 conv融合得到一张feature map作为TGM的输出。即feature map包含了target，srch img and their interactions，以提供充足的信息。
 
@@ -39,7 +39,7 @@
 
 ####   2.4 training procedure
 
-![](/home/lei/Desktop/bgb2.png)
+![](..image/bgb2.png)
 
 ​	  在线训练时需要三张图，support image，exemplar，query image。红框为内优化，篮框为外优化。内部优化只优化检测器的head。外优化优化整个网络。
 
@@ -63,8 +63,8 @@
 
 ​		效果一般
 
-![](/home/lei/Desktop/bgb3.png)
+![](..image/bgb3.png)
 
 #### 4.2 ablation study
 
-![](/home/lei/Desktop/bgb4.png)
+![](..image/bgb4.png)
