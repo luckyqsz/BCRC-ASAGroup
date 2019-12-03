@@ -18,29 +18,29 @@ with Target Estimation Guidelines
 
    #### 2.1 network
 
-   ![](/home/lei/Desktop/siamfc++1.png)
+   ![](../image/siamfc++1.png)
 
    ​		quality assessment是啥？？？
 
    ​		值得注意的是在分类时，作者认为落在bbox内部的点都算positive，在计算loss时，只考虑positive的点，在对位置回归时，作者实验发现PSS loss比IOU loss高0.2个点，所以位置回归分支使用PSS loss，分类分支使用focal loss，quality分支使用BCE。如果考虑背景会不会对模型的判别性有进一步的提高。
 
-   ![](/home/lei/Desktop/siamfc++2.png)
+   ![](../image/siamfc++2.png)
 
 3. ## Experiments
 
    #### 3.1 Ablation study
 
-   ![](/home/lei/Desktop/siamfc++3.png)
+   ![](../image/siamfc++3.png)
 
    ​	由该图可以看到siamFC++改进的各部分对于最后结果的提升（与原始的siamFC比较），位置回归对EAO提升最大，the regression branch (0.094), data source diversity (0.063/0.010), stronger backbone (0.026), and better head structure (0.020).
 
    #### 3.2 model result
 
-   ![](/home/lei/Desktop/siamfc++4.png)
+   ![](../image/siamfc++4.png)
 
    #### 3.3 siamRPN系列anchors问题的实验分析
 
-   ![](/home/lei/Desktop/siamfc++5.png)
+   ![](../image/siamfc++5.png)
 
 4. ### 改进方向
 
