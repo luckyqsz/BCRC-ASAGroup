@@ -30,7 +30,7 @@
 
      ​	在常规的数据增强方法外，作者发现增加图像的运动模糊也有效。
 
-   ![](/home/lei/Desktop/dasiam2.png)
+   ![](../iamge/dasiam2.png)
 
 3. ### Distractor-aware
 
@@ -38,7 +38,7 @@
 
    
 
-   ![](/home/lei/Desktop/dasiam1.png)
+   ![](../iamge/dasiam1.png)
 
 4. ### DaSiamRPN for Long-term Tracking
 
@@ -48,8 +48,8 @@
 
 5. ### experiments
 
-   ![](/home/lei/Desktop/dasiam3.png)
+   ![](../iamgep/dasiam3.png)
 
    ​		根据消融实验，数据增强，distractor-aware以及数据增强带来的EAO收益均在0.02左右。
 
-   ![](/home/lei/Desktop/Dasiam4.png)
+   ![](../iamge/Dasiam4.png)
