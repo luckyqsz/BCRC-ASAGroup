@@ -26,7 +26,7 @@
 
    ​	因为学习梯度信息比学习图像特征信息难，所以网络更加倾向于学习图像特征。那么只要让他们的难度差不多就可以强迫网络学习到梯度信息。于是作者对于一组来自不同vedio的4个srch_img,选用同一个template（该template在4个srch_img上都能一定程度的匹配），这样使得他们的匹配难度加大，网络强迫学习梯度信息。
 
-   ![](../image/gradnet3.png)
+   ![](./image/gradnet3.png)
 
 4. experiments
 
