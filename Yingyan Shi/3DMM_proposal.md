@@ -16,6 +16,8 @@ $$
 S'= \hat{s} + S\alpha + E\eta
 $$
 
+***S'*** = ***s^*** + ***S******α*** + ***E******η***
+
 ***S'***: 3D Morphable Model representation
 
 ***s^***: the average 3D face shape
@@ -56,8 +58,10 @@ MTL framework:
 
 **Pose-Invariant 3D Face Alignment**
 ICCV 2015
+
 **Pose-Invariant Face Alignment with a Single CNN**
 ICCV 2017
+
 **Pose-Invariant Face Alignment via CNN-based Dense 3D Model Fitting**
 IJCV 2017
 
@@ -65,6 +69,7 @@ IJCV 2017
 
 **Joint Face Alignment and 3D Face Reconstruction**
 ECCV 2016
+
 **Joint Face Alignment and 3D Face Reconstruction with Application to Face Recognition**
 TPAMI 2018
 
@@ -72,6 +77,7 @@ TPAMI 2018
 
 **3D Face Morphable Models “In-the-Wild”**
 CVPR 2017
+
 **3D Reconstruction of "In-the-Wild" Faces in Images and Videos** 
 TPAMI 2018
 
@@ -79,6 +85,7 @@ TPAMI 2018
 
 **Pose-Aware Face Recognition in the Wild**
 CVPR 2016
+
 **Learning Pose-Aware Models for Pose-Invariant Face Recognition in the Wild**
 TPAMI 2018
 
