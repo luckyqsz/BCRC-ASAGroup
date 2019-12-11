@@ -635,7 +635,7 @@ queryable topic tracking (DiaQueTT)
 
 
 ---
-## [A Deep Relevance Matching Model for Ad-hoc Retrieval](http://www.bigdatalab.ac.cn/~gjf/papers/2016/CIKM2016a_guo.pdf)
+## [A Deep Relevance Matching Model for Ad-hoc Retrieval](http://www.bigdatalab.ac.cn/~gjf/papers/2016/CIKM2016a_guo.pdf)(CIKM2016)
 
 * 针对专门的检索任务，通常这一任务会被转化为一个两个文档的匹配问题，大多数NLP任务为语义匹配，而这一任务为相关性匹配
 * 手工的特征是耗时的、不完整的和过于具体的，深度神经网络作为一种表示学习的方法，能够从训练集中发现隐藏的结构和特征
@@ -665,3 +665,97 @@ queryable topic tracking (DiaQueTT)
 <br>
 
 * 使用匹配信号而不是文本作为输入，使得模型更加灵活
+
+---
+## 《强化学习精要》
+
+### 1 引言
+* 强化学习关注的两个目标：学习效果和学习时间
+* 监督学习的目标更明确，输入对应的是确定的输出，而且理论上一个输入只对应一个输出；而强化学习的目标没有这么明确，使当前状态获得最大回报的行动可能有很多。
+* 强化学习更看重行动序列带来的整体回报，而不是单步行动的一致性
+* **模仿学习**，存在以下问题：1）如何收集满足目标的样本；2）如何收集大量的样本；3）如何确保学习的模型拥有足够的泛化性
+
+### 2 数学与机器学习基础
+* 交叉熵损失只和正确分类的预测结果相关，而平方损失的梯度还和错误分类有关
+
+### 3 优化算法
+* 动量算法
+
+### 4 TensorFlow入门
+
+### 5 Gym与Baseline
+
+### 6 强化学习基本算法
+
+### 7 Q-Learning 基础
+
+
+---
+## [APPLYING DEEP LEARNING TO ANSWER SELECTION: A STUDY AND AN OPEN TASK](https://arxiv.org/pdf/1508.01585.pdf)
+
+* 面向QA问题，在所有候选问题中选出分数最高的一个，候选数为500
+* 面向保险行业的QA
+* 大部分模型的思路都是一致的：学习一种问句和候选答案的分布式向量表示方法，然后使用一种相似性度量方法来计算匹配程度
+* 第一个模型是词袋模型，先训练词向量，带idf权重的词向量之和来表示句子，计算余弦相似度
+* 第二个模型是weighted dependency model，即metzler-bendersky IR model
+* 第三个模型是CNN模型
+* 使用　hinge loss
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/0d8b56ecad93292be48a13e989bf49d.png)
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/01df076becb3cbbdcc5be04a401d631.png)
+* 除了使用余弦相似度，还使用了GESD和AESD等相似度计算方法
+
+
+* 和事件匹配的思路很像
+* 1：500的比例不平衡
+
+---
+## [Event Detection in Noisy Streaming Data with Combination of Corroborative and Probabilistic Sources](https://arxiv.org/pdf/1911.09281.pdf)
+
+* 使用带有大量噪音的社交媒体文本，不提前假设概念的漂移，不依赖于人工标注
+* 使用联合分类器
+* 概念漂移问题，有的是用滑动窗口的方法实现，SAM-KNN对新数据选择最近的窗口，
+* 结合了Corroborative source 和 Probabilistic supporting source ，前者是是确信的但延迟的，通过其调整分类器
+* 关注于自然灾害，从相关网站和新闻获取 Corroborative source
+* 从推特和脸书等社交网络获取 Probabilistic supporting source
+* 假设：一旦在确信数据源中某个事件被检测出来，则同一时空背景下的流式数据自动认为相关
+* 对于确信数据源的分类：标签来源于数据本身，如NOAA预测某地有滑坡的危险，则把高概率的预测作为ground truth
+* 使用词向量的余弦相似作为距离度量，通过评估当前窗口和之前窗口的距离来检测漂移，如果发生漂移则成立新的窗口，如果没有则挑出k个最近的分类器
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/be887ef6eb294ecfc84b6b742ce4f4a.png)
+<br>
+
+* 分类器发生漂移就新建分类器的方法会使得事件的正常波动和变化无法被检测，事件倾向于分裂
+* 系统具体的算法和结构不清楚
+
+---
+## [Experiments with Convolutional Neural Network Models for Answer Selection](https://cs.uwaterloo.ca/~jimmylin/publications/Rao_etal_SIGIR2017.pdf)(SIGIR2017)
+
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/208b829cd63e397382fbbb9c9d454d7.png)
+
+
+---
+## [Convolutional Neural Network Architectures for Matching Natural Language Sentences](https://www.researchgate.net/profile/Qingcai_Chen/publication/273471942_Convolutional_Neural_Network_Architectures_for_Matching_Natural_Language_Sentences/links/5614641708ae983c1b4083af/Convolutional-Neural-Network-Architectures-for-Matching-Natural-Language-Sentences.pdf)
+
+* 通过卷积和池化操作提取特定长度的文本表示，对于不同长度的文本采取补零的方法，在卷积过程中，设置一个gate，当输入全为0时，输出全为0
+* 不同于一般学习到句子的表示向量后做内积，本文在文本对的匹配空间建立深度网络结构
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/af71fd6648429601a918dad78545732.png)
+<br>
+* 如何保证输出向量维度
+
+---
+## [MIX: Multi-Channel Information Crossing for Text Matching](https://kopernio.com/viewer?doi=10.1145/3219819.3219928&route=1)(KDD2018)
+
+* 针对文本匹配任务提出一种多通道的卷积神经网络，并增加了注意力机制，不同粒度的相似度矩阵作为不同通道，有两种通道，语义信息通道（unigrams, bigrams and trigrams）作为相似度计算，结构信息通道（POS，NER）作为注意力机制
+* 在QQ浏览器实施A/B test，并在WiKiQA和在QQ浏览器上得到的搜索结果数据
+* 文本匹配大致上有两种：基于表示的（CNN based， RNN based， tree-based RNN methods）和基于交互的
+* 用idf的乘积、POS和位置信息来初始化注意力权重
+* 利用卷积来融合不同的通道
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/1a4d146693bdefd015980299b12a54e.png)
+* 评估：归一化折损累计增益（NDCG），mean average precision (MAP)
+* 与位置信息相比和POS信息并没有得到更好的结果,weight则得到了最好的结果
+
+<br>
+
+* Steve Curry won his first MVP in 2014 和 What year did Lebron James win his first
+MVP 的例子很像 北京暴雨和深圳暴雨，作者用注意力机制解决这个问题
+
+---
