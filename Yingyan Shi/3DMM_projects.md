@@ -17,7 +17,7 @@ Test result:
 1. Pose estimation: accurate
 2. Shape & expression: appearing slightly generic and not discriminative 
 
-Observation: Leave space to explore, incorporating 3D information, to achieve 3D aided 2D FER.
+Observation: Leave space to explore, incorporating 3D information, to achieve 3D-aided 2D FER.
 
 **Existing related open-source projects:**  
 
