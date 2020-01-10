@@ -1105,7 +1105,7 @@ ___
 
 ---
 
-## [INTWEEMS: A Framework for Incremental Clustering of Tweet Streams]([http://delivery.acm.org/10.1145/2850000/2843853/a87-khan_minhas.pdf?ip=202.120.224.53&id=2843853&acc=ACTIVE%20SERVICE&key=BF85BBA5741FDC6E%2E88014DC677A1F2C3%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1576413494_42f5149dd1783d5bffd267e8efe5fded](http://delivery.acm.org/10.1145/2850000/2843853/a87-khan_minhas.pdf?ip=202.120.224.53&id=2843853&acc=ACTIVE SERVICE&key=BF85BBA5741FDC6E.88014DC677A1F2C3.4D4702B0C3E38B35.4D4702B0C3E38B35&__acm__=1576413494_42f5149dd1783d5bffd267e8efe5fded))(iiWAS 2015)
+## [INTWEEMS: A Framework for Incremental Clustering of Tweet Streams](http://delivery.acm.org/10.1145/2850000/2843853/a87-khan_minhas.pdf?ip=202.120.224.53&id=2843853&acc=ACTIVE%20SERVICE&key=BF85BBA5741FDC6E%2E88014DC677A1F2C3%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1576413494_42f5149dd1783d5bffd267e8efe5fded)(iiWAS 2015)
 
 * INTWEEMS uses cosine similarity for textual features and L1 distance for metadata based features
 
