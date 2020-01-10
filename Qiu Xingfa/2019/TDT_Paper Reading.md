@@ -676,7 +676,7 @@
 
 ---
 
-## [Adaptive Multi-Attention Network Incorporating Answer Information for Duplicate Question Detection](http://delivery.acm.org/10.1145/3340000/3331228/p95-liang.pdf?ip=202.120.224.53&id=3331228&acc=ACTIVE%20SERVICE&key=BF85BBA5741FDC6E%2E88014DC677A1F2C3%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1571709823_661dc7afae46acce82bc80b96e3b56ab#URLTOKEN#)
+## [Adaptive Multi-Attention Network Incorporating Answer Information for Duplicate Question Detection](http://delivery.acm.org/10.1145/3340000/3331228/p95-liang.pdf?ip=202.120.224.53&id=3331228&acc=ACTIVE%20SERVICE&key=BF85BBA5741FDC6E%2E88014DC677A1F2C3%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1571709823_661dc7afae46acce82bc80b96e3b56ab#URLTOKEN#)（SIGIR 2019）
 
 ### ABSTRACT
 
@@ -696,7 +696,7 @@
 
 ---
 
-## [Pairwise Word Interaction Modeling with Deep Neural Networks for Semantic Similarity Measurement](https://www.aclweb.org/anthology/N16-1108.pdf)
+## [Pairwise Word Interaction Modeling with Deep Neural Networks for Semantic Similarity Measurement](https://www.aclweb.org/anthology/N16-1108.pdf)（NAACL 2016）
 
 * Most previous work use sentence modeling with a “Siamese” structure
 
@@ -710,7 +710,7 @@
 
 ---
 
-## [Semi-supervised Question Retrieval with Gated Convolutions](https://arxiv.org/pdf/1512.05726.pdf)
+## [Semi-supervised Question Retrieval with Gated Convolutions](https://arxiv.org/pdf/1512.05726.pdf)（NAACL 2016）
 
 ### Abstract
 
@@ -725,7 +725,7 @@
 
 ---
 
-## [Feature Driven Learning Framework for Cybersecurity Event Detection](https://asonamdata.com/ASONAM2019_Proceedings/pdf/papers/029_0196_083.pdf)
+## [Feature Driven Learning Framework for Cybersecurity Event Detection](https://asonamdata.com/ASONAM2019_Proceedings/pdf/papers/029_0196_083.pdf)（ASONAM 2019）
 
 * 对于社交媒体的网络安全事件检测，之前的方法基本上是集中于无监督和弱监督的方法，这些方法在现实中效果不佳，存在特征稀疏、处理弱信号（在大量数据中的少量数据）能力不强，模型泛化能力不强等缺点，这篇论文提出了一种多任务学习的有监督模型
 * 将不同种类的目标机构视为不同的任务
@@ -735,7 +735,7 @@
 
 ---
 
-## [Jointly Detecting and Extracting Social Events From Twitter Using Gated BiLSTM-CRF](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8866717&tag=1)
+## [Jointly Detecting and Extracting Social Events From Twitter Using Gated BiLSTM-CRF](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8866717&tag=1)（IEEE Access 2019）
 
 ### 简介
 
@@ -767,6 +767,7 @@
 ### 思考
 
 * 依然是pipeline，共享了一部分参数
+* 将事件发现简化为二分类是否相关的问题
 * 标注的方式很大程度上决定了解决的问题，文中根据关键词的方法进行事件检测，解决的就是针对特定领域事件的推特进行判断，正负均衡，泛化性不高
 
 ---
@@ -814,7 +815,7 @@
 
 ---
 
-## [Kernel-Based Distance Metric Learning for Supervised k-Means Clustering](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8617698)
+## [Kernel-Based Distance Metric Learning for Supervised k-Means Clustering](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8617698)（IEEE T Neur Net Lear 2019）
 
 * k-means算法的核心是找到一个合适的相似度计算函数，可以参试从已有的聚类数据集中进行有监督的学习
 * 半监督聚类基本上是基于某种约束，如a和b属于同一类等等
@@ -846,14 +847,14 @@
 
 ---
 
-## [Text Matching as Image Recognition](https://arxiv.org/pdf/1602.06359.pdf)
+## [Text Matching as Image Recognition](https://arxiv.org/pdf/1602.06359.pdf)(AAAI 2016)
 
 * 用图像识别的任务类比文本匹配的任务
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/df5fffce73101cc14fb194814d98dab.png)
 * 有词级别，n-gram级别和句子级别的直接匹配和语义匹配等不同层级的匹配信号
 * 使用动态池化策略来解决文本长度不一致的问题
 * 在释义识别和论文引用匹配两个数据集上测试
   <br>
-
 * 使用匹配信号而不是文本作为输入，使得模型更加灵活
 
 ---
@@ -885,7 +886,7 @@
 
 ---
 
-## [APPLYING DEEP LEARNING TO ANSWER SELECTION: A STUDY AND AN OPEN TASK](https://arxiv.org/pdf/1508.01585.pdf)
+## [APPLYING DEEP LEARNING TO ANSWER SELECTION: A STUDY AND AN OPEN TASK](https://arxiv.org/pdf/1508.01585.pdf)(ASRU 2015)
 
 * 面向QA问题，在所有候选问题中选出分数最高的一个，候选数为500
 * 面向保险行业的QA
@@ -904,7 +905,7 @@
 
 ---
 
-## [Event Detection in Noisy Streaming Data with Combination of Corroborative and Probabilistic Sources](https://arxiv.org/pdf/1911.09281.pdf)
+## [Event Detection in Noisy Streaming Data with Combination of Corroborative and Probabilistic Sources](https://arxiv.org/pdf/1911.09281.pdf)(arXiv 2019)
 
 * 使用带有大量噪音的社交媒体文本，不提前假设概念的漂移，不依赖于人工标注
 * 使用联合分类器
@@ -923,13 +924,13 @@
 
 ---
 
-## [Experiments with Convolutional Neural Network Models for Answer Selection](https://cs.uwaterloo.ca/~jimmylin/publications/Rao_etal_SIGIR2017.pdf)(SIGIR2017)
+## [Experiments with Convolutional Neural Network Models for Answer Selection](https://cs.uwaterloo.ca/~jimmylin/publications/Rao_etal_SIGIR2017.pdf)(SIGIR 2017)
 
 * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/208b829cd63e397382fbbb9c9d454d7.png)
 
 ---
 
-## [Convolutional Neural Network Architectures for Matching Natural Language Sentences](https://www.researchgate.net/profile/Qingcai_Chen/publication/273471942_Convolutional_Neural_Network_Architectures_for_Matching_Natural_Language_Sentences/links/5614641708ae983c1b4083af/Convolutional-Neural-Network-Architectures-for-Matching-Natural-Language-Sentences.pdf)
+## [Convolutional Neural Network Architectures for Matching Natural Language Sentences](https://www.researchgate.net/profile/Qingcai_Chen/publication/273471942_Convolutional_Neural_Network_Architectures_for_Matching_Natural_Language_Sentences/links/5614641708ae983c1b4083af/Convolutional-Neural-Network-Architectures-for-Matching-Natural-Language-Sentences.pdf)(NIPS 2014)
 
 * 通过卷积和池化操作提取特定长度的文本表示，对于不同长度的文本采取补零的方法，在卷积过程中，设置一个gate，当输入全为0时，输出全为0
 * 不同于一般学习到句子的表示向量后做内积，本文在文本对的匹配空间建立深度网络结构
@@ -965,8 +966,277 @@
 
 ---
 
-## [What’s Happening Around the World? A Survey and Framework on Event Detection Techniques on Twitter](https://link.springer.com/content/pdf/10.1007%2Fs10723-019-09482-2.pdf)
+## [What’s Happening Around the World? A Survey and Framework on Event Detection Techniques on Twitter](https://link.springer.com/content/pdf/10.1007%2Fs10723-019-09482-2.pdf)（J Grid Computing 2019）
 
-## [Building a Large-scale Corpus for Evaluating Event Detection on Twitter](https://kopernio.com/viewer?doi=10.1145/2505515.2505695&route=1)
 
-## [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/pdf/1908.10084.pdf)
+
+* 事件的一些定义：
+  * Things that happen
+  * something that happens at a specific time and place with consequences
+  * something significant that happens at specific time and place
+  * a set of posts sharing the same topic and words within a short time
+  * an event is a real-world occurrence e with a time period Te and a stream of Twitter messages discussing the event during the period Te
+  * in the context of online social networks, (significant) event e is something that causes a large number of actions in the online social network
+  * an event is a way of referring to an observable activity at a certain time and place that involves or affects a group of people in a social network
+* Specified Event Detection（SED） 和 Unspecified Event Detection（UED）
+* 大多数数据来自于推特API和爬虫，数据平均时间为六个月，平均数量为2600万，标准数据集的产生的方法：1）关注热门事件；2）人工标注一部分；3）聚类之后进行标注
+* 特征提取：1）Keyword-Based；2）Twitter-Based；3）Location-Based；4）Language-Based
+* 事件相关的信息有三种，事件的发展，事件本身，事件的影响
+* 谣言即 未被核实或故意错误的信息，机器账号即由计算机程序控制的账号
+* 对于Specified Event Detection，即预先指定事件
+* **Document** Pivot and **Feature** Pivot
+* 监督的方法基本上基于事件的静态假设
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/4ac79814040ee16e83968a249de915c.png)
+* 推特文本包含很多噪音，缩写、错字等，文本的处理其实也是一个耗费计算资源的过程，标准数据集的产生也是一个大问题，不同事件在热度、参与用户和文本数都不一样，多语言，多模态
+
+---
+
+
+
+## [Building a Large-scale Corpus for Evaluating Event Detection on Twitter](https://kopernio.com/viewer?doi=10.1145/2505515.2505695&route=1)(CIKM 2013)
+
+* 产生了包含28天，从2012-10-10到2012-11-07的120m的推特的语料，包含美国总统选举，飓风Sandy等事件，去除了非英语推特，去除了一些垃圾信息，关联性判断的语料150k推特和500个事件，去除了转发，提供用户id和推特id，使用工具预聚类和Wikipedia挑选事件，
+* 对于事件的定义还不一致，导致不同方法的比较相对困难，如有些人把选举当成一个事件，但有些人把选举当成多个事件
+  * something that happens at some specic time and place, and the unavoidable consequences
+  * (1) an associated time period Te and (2) a time-ordered stream of Twitter messages, of substantial volume, discussing the occurrence and published during time Te
+  * a burst in the usage of a related group of terms
+  * something that happens at some specic time and place
+  * Something is signicant if it may be discussed in the media
+* [数据下载](http://mir.dcs.gla.ac.uk/collections/events2012/dataset/Events2012.tar.bz2)
+* TREC包含2周16M推特，包含多种语言，其中英文推特约4M，为ad-hoc retrieval任务所设计，对于基于事件的分析并不适用
+* 认为对于事件的不真实的描述为不相关，而只是讨论并没有叙述的推特认为是相关
+
+---
+
+
+
+## [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/pdf/1908.10084.pdf)（arXiv 2019）
+
+* 使用BERT做句子对的相似度问题计算量大，1万个句子有约5000万种组合，在V100上inference需耗费大约65小时，对于有大量组合可能的任务不太适合，作者提出使用siamese and triplet结构的BERT以减少计算，计算时间减少到5秒
+* 大部分句子表示方法为输出取平均或者选择[CLS]作为句子表示，但这种表示方法甚至比Glove向量平均更糟
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/66c108f8d55764d1115d18ab8e62dc9.png)
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/51517b3efb7f9b1ceca41e072be5291.png)
+* 使用语义相似任务来做评估
+
+
+
+---
+
+## [TopicSketch: Real-time Bursty Topic Detection from Twitter](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=632B3AEC809E16EBB6265E9BD3794CD9?doi=10.1.1.638.3816&rep=rep1&type=pdf)(IEEE T Knowl Data En 2016)
+
+* 突发话题检测的难点在于：1）如何有效地保持合适的统计信息去触发detection；2）如何在无法像传统主题模型一样接触全部数据的情况下建模。部分工作提前定义了关键词。这是第一个在没有提前定义话题关键词的情况下进行实时突发话题检测的工作。
+* 相关技术包括Offline，Online（计算量大）和Realtime（仍需提前指定）的方法
+* 突发话题需是有一个突然的相关微博总数的增加表示热度，相关话题必须合理
+* 三个主要的挑战：1）如何识别出突发话题（比如，话题的关键词是什么）；2）如何尽早地检测到突发话题（加速度）；3）如何在大范围的实时数据下有效地实施（维度约简）
+
+
+
+---
+
+## [Multiresolution Graph Attention Networks for Relevance Matching](https://arxiv.org/pdf/1902.10580.pdf)(CIKM 2018)
+
+* 深度学习网络对于短-长文本对的相关性匹配效果并不好
+* 使用图的方法来表示，顶点表示关键词（抽取命名实体，并用tf-idf的方法扩展挑选前20%），边表示关键词之间的相互作用程度（若词距离小于阈值，则建立联系权重为词距离的倒数）
+
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/3dbcaec687810092ce0b781826c0f66.png)
+
+* 多层图卷积提供了多分辨率的节点表示
+* 无监督方法效果不佳，基于特征的方法耗时
+* 相关匹配更关注于是否相关而不关注语义是否相同，‘A man is playing basketball’ 与 ‘A man is playing football’ 是不相关的，相似匹配任务更注重于匹配信号
+* 将 relevance matching 转化为 query-graph matching
+* 挑选k个关键词进一步处理
+
+___
+
+## [A rule dynamics approach to event detection in Twitter with its application to sports and politics](https://pdf.sciencedirectassets.com/271506/1-s2.0-S0957417416X00061/1-s2.0-S0957417416300598/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLWVhc3QtMSJIMEYCIQCF3x69XKi45SNJK7tGiAR2d6uAfV%2B0gQKqV86%2Fh4twWwIhAOBwIMbwMNgHlHDvqxlEPt2Kh8GsSmGjYllo2fw52FmTKtACCFwQAhoMMDU5MDAzNTQ2ODY1IgzaqhP%2FaXtjyIaiX%2FAqrQKtLB6az1qCC6r9v1gPCZk6kxD8GRjTrmaL3Q2V%2BlgSegLHEA86Y2JiTMkBvYwVHKrR8wGJaFoYX8brH6Y08%2BTBnaE41FH2udmRi7uNWNlxL8nEci6DnktjnicpeWbK4DV%2Bkp9UP3BO04EenayTf6FVEVuYDWFTyly8L7bk6KVatiNslO1PXy%2F6ph8lGdBS%2Fy8FyFqLryYGFe4flIejCwtNNkopHIP7TsEhkNWe4giJxLU8grzEa1uqoFztFkmGRwi%2F8uRegeK0sK2NmnQPKE4iTa6yuNtUE9O%2FjSpqNrn1DxBq7DE7jYhkIaI3VL%2F2n2IaK9BRDmn6MGGZipZ3LO%2FwDUjzJYK3MU09VeJKrIDdH7He%2BYKfYpesV4w8A0ZcT4BX9f5vuCDkrGb4k0COMIut2O8FOs4C%2B9Us3fXGixVv%2FGlp3PlFmUUxmvlAQIi8ZO04pmXKm%2FTx0J9QplFa4np%2BgNL9iYCJXJup0c%2FiM%2BA4qhSy5g3zQq%2FJlrd7chPx4txyBO%2Fu3dA8sfJEMC%2BK6WP%2Fwl3rcdNIg7wIcCkoR1FipNZJWeWjhcfBrA1YcCjhaUu3%2FRvBeQyS8IaAgX74Aun5lB8rXOFNc0YZSJt%2FB4qDrjp4pmiwjPiXRiyjIOSqOFJHQ2NcunxXM90EnmtiuBI4lJMIKPrP6U8VtLQ2zfDSCEVANLpzc1Uao%2BS4a5h0g653WyYcj987%2BKrXuyulUPLqbSS7Sj%2BCWP6beE1oeljQpbmxHUcqL%2F9gYhmtDfT0jOHYhGlAVS9PdfjKK72LgU6hxRFVsppZrSeq5z51p9LzVw6P9zwDOYgCUuhIyWpUPNWD0i3OHk24swHT3T3Wm1W3%2Fu0i0A%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191215T122122Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYXQKDFVMK%2F20191215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=cda71e5e261856ac03e6e99b64db8b0c390523aee99ae6460be96f098216e065&hash=3f2e7d99520ee6ecf39328e77385980428ec54e9f3de26e1c6904d7d59f24766&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0957417416300598&tid=spdf-3a634fb1-dea8-44df-b96b-755584d089c4&sid=0fb4c4cb8067534e2d0ac5e5e4639da5897bgxrqa&type=client)(Expert Syst.Appl. 2016)
+
+___
+
+## [A SURVEY OF TECHNIQUES FOR EVENT DETECTION IN TWITTER](https://onlinelibrary.wiley.com/doi/pdf/10.1111/coin.12017)(Comput. Intell. 2015)
+
+* 推特数据包含了大量噪音，the short length of tweets, the large number of spelling and grammatical errors, and the frequent use of informal and mixed language
+* **A major challenge** facing event detection from Twitter streams is therefore to separate
+  the mundane and polluted information from interesting real-world events
+* **three major phases** ：
+  * data preprocessing（filtering out stopwords and applying words stemming and tokenization techniques）
+  * data representation（term vectors or bag of words）
+  * data organization or clustering
+* TDT主要分为两种：
+  * retrospective event detection (RED) (iterative clustering algorithms)
+  * new event detection(NED)(query-free retrieval tasks, incremental (greedy) algorithms)
+* However, the TDT line of research **assumes** that all documents are relevant and contain some
+  old or new events of interest. This assumption is clearly **violated** in Twitter data streams, where relevant events are buried in large amounts of noisy data.
+* 对于UED，Sankaranarayanan et al. (2009) 先用朴素贝叶斯分类器判断是否新闻相关，再进行聚类（考虑时间信息），还使用了标签信息，还有一些方法先进行聚类，然后判断是否与现实世界相关
+* partitioning clustering techniques such as K-means, K-median, and K-medoid or other approaches based on the expectation–maximization algorithm are also **not suitable** because they require a prior knowledge of the number of clusters (K)
+* **Cosine similarity** is most commonly used within these online clustering algorithms to compute the distance between the (augmented) term vectors and the centers of clusters.
+* 新事件检测类似于异常检测
+
+---
+
+## [A deep multiview learning framework for city event extraction from Twitter data streams](https://arxiv.org/pdf/1705.09975.pdf)(arXiv 2017)
+
+* contributions
+  * Automated real-time data collection wrappers for Twitter and city sensors;
+  * A near real-time NLP component for classifying Twitter data;
+  * A correlation analysis for detecting the dependencies between Twitter stream and city sensors and web driven data records;
+  * A web interface for displaying and visualising the citys event highlights.
+
+---
+
+## [Event detection in Twitter stream using weighted dynamic heart beat graph approach](https://arxiv.org/pdf/1902.08522.pdf)(IEEE Computational Intelligence Magazine 2019)
+
+* 关注于新事件的发现，一旦新事件被发现，随后便减少关注，WDHG对变化敏感
+* 突发事件发现的方法忽略较小的事件
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/aa74ca77fe38681a2e556d5fd42f2ae.png)
+
+
+
+---
+
+## [A language-independent neural network for event detection]()(SCIENCE CHINA Information Sciences 2018)
+
+* 之前的方法注重于大量的词汇和语法的特征，feature engineering is labor intensive and prone to error propagation
+* Bi-LSTM+CNN的混合方法
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/b6141686d566bc4633bc155dfe9d70e.png)
+
+---
+
+## [Real-time event detection for online behavioral analysis of big social data](https://pdf.sciencedirectassets.com/271521/1-s2.0-S0167739X16X0009X/1-s2.0-S0167739X16300899/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLWVhc3QtMSJHMEUCIQC2i0Wl3Qsu9LJjSFskveQLi02ft%2FwktjtwQCun8zgwegIgZBYTb%2FNlKPJdUYwx7y3GZ4xxlgMImaWrDjlDhkFn9MgqzwIIXBACGgwwNTkwMDM1NDY4NjUiDOxHKtSH3JSVqKjpnyqsAtm3Ph5mXf5nUSqYKb1wwax651KUC4jPOrF2sR7cP5UCaM%2FDmEkW2sfW7eodsdRapFcwI5QBuqWznkFyB%2FrMsgGP%2FGptNtwCYxFJvHLwHsfgdQyOF7MPbhreqXQtjkgzSS02SWjkm%2FneTjuS2NFpKp%2BWv07eL4pu3dtMmiq7luTm%2B4Ym5e0Yua0s%2FGInYpT%2FlMrwbmyzMdwDaRkIJ6Z9iCbmIpDO0VtxytkXWnkxWAD2GzhlSVoJ2yg75Q0HNhefiQuj2qpvmSLWJIdt4vBpasFClwvYieJxUBLc8f8mo690RUYFbqK%2BFclU9%2BBJnVmHheS%2Fv9hK9uUn2PxzFR9Jl7kqnXOZKUxArQOjeEsoTREX0V60WW6mQ7Po6wzAHTzppBmCUH1zK1eHLDEu7jDEqtjvBTrQAqisPHK0%2FrUfLD6H1CwguAEjBKGYcOPObml69pc%2BdM1JFWqV7uzaKbv97cCZRvmEor%2BkePoSaGpjnOMy8dE7je6xnDu4xDRfsI8CeIK2%2BqZDrA1T6S1K1CaNudxLEmH2XWGkT4JSUBTb9V5kZ1SqTIlVyYg0eT4J5ANMXSuH56n%2F8%2Fx8Qcihb%2BHyTXBuFqQYYUQINQOx67ogyLKlvo%2Bd0vfCMLTFWn%2Fxb40HihpheFd3FFObFXxlpyy2tig6bakv64GgxEWEckPZ7Eu3QYqYlg%2FJinhpCIlNWIrELj83ytdLSwNAiERspVpK%2BmXOnvZGT%2Bdh1hcziLrlRj5AH2Iejt5qwxHfmvgigXuR6Y1UJGyXt1u63PIhPto5Fu4HLo%2BRsRq%2Fh7bGqogzdElfh83AHTd%2BtcSbd8fZocMAWmcKxLQUzP%2FK2BVdWPKSu780n38%2Byg%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191215T123457Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYSMXT755S%2F20191215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=4b6ab08fa682125c9b80e5eeba264bd49ec8cf44e6595ad19f6762808c6684be&hash=ca158e0851a4550b38782c2b98e7340b26263ee98ccd4656c0d54ddf50d600c2&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0167739X16300899&tid=spdf-1ff11b46-77f8-48b9-8578-41d8b3ecf644&sid=0fb4c4cb8067534e2d0ac5e5e4639da5897bgxrqa&type=client)(Futur. Gener.Comput. Syst. 2017)
+
+---
+
+## [INTWEEMS: A Framework for Incremental Clustering of Tweet Streams]([http://delivery.acm.org/10.1145/2850000/2843853/a87-khan_minhas.pdf?ip=202.120.224.53&id=2843853&acc=ACTIVE%20SERVICE&key=BF85BBA5741FDC6E%2E88014DC677A1F2C3%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1576413494_42f5149dd1783d5bffd267e8efe5fded](http://delivery.acm.org/10.1145/2850000/2843853/a87-khan_minhas.pdf?ip=202.120.224.53&id=2843853&acc=ACTIVE SERVICE&key=BF85BBA5741FDC6E.88014DC677A1F2C3.4D4702B0C3E38B35.4D4702B0C3E38B35&__acm__=1576413494_42f5149dd1783d5bffd267e8efe5fded))(iiWAS 2015)
+
+* INTWEEMS uses cosine similarity for textual features and L1 distance for metadata based features
+
+---
+
+##  [Real-time event detection from the Twitter data stream using theTwitterNews+ Framework](https://reader.elsevier.com/reader/sd/pii/S0306457317305447?token=7E3DF044B3D935C12F4DB53B0546F929CDAC0FE5A7B1403D490EACFA7041FA7266AA723D0179419F2705442A5FD98F05)(Information Processing and Management 2018)
+
+* 前一篇文章 [TwitterNews: Real time event detection from the Twitter data stream](https://www.researchgate.net/profile/Mahmud_Hasan8/publication/309426330_TwitterNews_Real_time_event_detection_from_the_Twitter_data_stream/links/581a12b008aeffb294130fd1/TwitterNews-Real-time-event-detection-from-the-Twitter-data-stream.pdf?_sg%5B0%5D=TnznRnCrOp6ZZclRyRwcqEB4IIRkbOvPhDGOkLY403iD2TAh87WNHmQ3YgnlhW8H_kxDJ4o4zW7AvOJIUF_s6Q.rvivN9t4tv9QsIZ-bRsBICXS9YUkxh3FnhWYdRYuE0aqJQP9dlN752umgbo-SgQC6Or5VYV4nH1rhlxVQ0vbrQ&_sg%5B1%5D=W7u992XqavOYSoexjseJ7Q97t4XvzkCJC-9DGowiktOVZ4moje8qyeerx2nuRO5dB9wPyEYIS7EGMEmtYDwb_bLE83W_ZeQ7AW1GznnRG27r.rvivN9t4tv9QsIZ-bRsBICXS9YUkxh3FnhWYdRYuE0aqJQP9dlN752umgbo-SgQC6Or5VYV4nH1rhlxVQ0vbrQ&_iepl=)（PeerJ Preprints 2016）
+* provide a **low computational cost** solution to detect both major and minor newsworthy events in real-time from the Twitter data stream，The first stage
+* event detection 的三种方法 (a) term-interestingness（**computation intensive**）, (b) topic-modeling, and (c) incremental-clustering
+* McMinn and Jose (2015) 以实体为基础，计算与新推特有最近距离的有同一实体的推特相似度，选择相似度最高的推特所属的簇，否则建立新簇
+* 增量聚类方法倾向于分裂，往往难以分辨发生在同一时间的相似事件
+* 1)预处理:通过关键词筛选过滤无关的推特; 2)后处理:进一步筛选有价值的事件
+* 使用 Euclidean dot product 计算cos相似
+* 选择Event2012前三天的数据作为评估，包括31个事件,17M推特,  结合人工进行评估
+* 平均处理1336条推特每秒
+* 数据和评估方法不清,难复现
+
+
+
+---
+
+## [Cluster-discovery of Twitter messages for event detection and trending](https://pdf.sciencedirectassets.com/280179/1-s2.0-S1877750314X00074/1-s2.0-S1877750314001604/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLWVhc3QtMSJIMEYCIQCX2IsLJZpliVcQTwAG47vEWVRqhqFZA1vtbfLU6pF84wIhAMentCwGvr9BcOd8T5pMqigUjhOfBS9MeiVp0BxS1u45KtACCF0QAhoMMDU5MDAzNTQ2ODY1IgxFDFMNFNuxUA4tgjcqrQIsj2yNTj5qM0E2Zs9dXiymxKk9taqUz9LOxJR%2FNc22x2fcrMvWNPfoyNLV0nA3MxVgBRH73oDISoMwRwhjhJa%2Fmb0BKQsQsl2Gnn1di1h8zimq0kHISPQcJZbzXFrgLhrfekb2pX1zJvJbdwraLFatVLxH67UypRCR9VFxF3rxXqQWSnuvRPxqlJ3h1bJKl9hLOqG0v2DRiBWf%2BVHC8uyvg1H09A97trkJCbqPctanafBuj5z5ulS8ta9HDIW1UBJfEyHEVmWIwVnwh5QfuhHskM2DYnBjQtD07cJSLNAGplaUeZLgui%2BrVKBXJDCa2i7EM2yExrHikbRFx7cyBy6SQZzomYtxWmFu%2BN5%2Bt0qgjjniUfV4DteDPXgOMkNUUz8AfEmEgGxWEmG0b%2B6DMMKy2O8FOs4CEo707Bn2Y6AIWAAFIGGbpEzIu86451EQ%2BKS8sBzHwIXOyPHomp3oNhJc00qHM0ReTHKO%2BU2WsDLbzQbOZA4acQX%2Bq1WiYtW7xGpMUXmMbQ9XiK2TC4xJJrkp1kzgPPHrNJdeziUDQ0X98NvQIJDXVGuc6OQsMAHeuNIxUeROMXnBXWDXlC8sqiUjdg6ZVUQq3F0IEHnDGtoWEmlmCFzWNDylf7JOsyi3eTj2h%2FvyHXe%2B6wuomC3BVenVfhfB42jGyb6g6P0NE1pPf5emQPoW69MvSZqFs5niEnJFe0bMD7xhPuiNpB9Ihy5wSlcSTK2OlvvkzUSt02jxnQyDxuh%2BueJ7EB1ONUo0S3yhsCFjdCCMItU9OdmlrC0G7DDf%2BrY8PwF58Mqus4mqEt3BQ0ZHkllwdPba0Qqk9hAMyevz9W6biBurMGpbOGk79vkfuw%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191215T123047Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY4BKHVWHY%2F20191215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=d9e044c8578137a719bff4ca282ce883959226225e1b3ed2caf33a4e96384a6f&hash=b96be2d2c2d579c9b2cc8c9cf0ee7d26de23c505476efc99208c8711b16a880c&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1877750314001604&tid=spdf-15b230ad-d312-4bc4-a724-54af4baf2fcb&sid=0fb4c4cb8067534e2d0ac5e5e4639da5897bgxrqa&type=client)(J. Comput. Sci. 2015)
+
+
+
+---
+
+## [Fine-grained Event Categorization with Heterogeneous Graph Convolutional Networks](https://arxiv.org/pdf/1906.04580.pdf)(arXiv 2019)
+
+* **Pairwise Popularity Graph Convolutional Network** (PP-GCN) based fine-grained social event categorization model
+* build a **weighted adjacent matrix** as input to the PP-GCN model
+* modeling social events is very complicated and ambiguous,
+* we **first** present event instance (shown in short text message) as hyper-edge in an **HIN**,
+* 利用NLP工具抽取构建，实体、同义词、话题和用户之间的关系，每个事件都是某些关系的总和是HIN的子图
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/ed45b8a778d65aa260f810d60006d43.png)
+* 根据事件之间的路径来计算事件之间的相似度 KIES
+* 用Doc2vec作为 event instance（即文档）特征
+* 以正负均衡来挑选pair，但实际上负例远多于正例
+* 使用半监督k-means方法进行聚类比较，学习到一个合适的相似度计算方法
+
+---
+
+## [CATI: An Active Learning System for Event Detection on Mibroblogs’ Large Datasets](https://pdfs.semanticscholar.org/bbc7/59fc00fa31020df86802246eba9d52d13ff9.pdf)（WEBIST 2019）
+
+* 主动学习，即机器学习结合人工标注
+
+
+
+---
+
+## [Hot Topic Detection on Twitter Data Streams with Incremental Clustering Using Named Entities and Central Centroids ](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8713730)(RIVF 2019)
+
+* 在Event2012数据集中获得0.92的Recall和0.85的NMI，并且在30min内处理500k推特
+* many **challenges**: volume and velocity, real-time event detection, noise and veracity, feature engineering, and evaluation
+* 使用最相似的一些推特来计算形心代表簇
+* a **high computational cost** is a major problem for social data streams
+* 新来的推特只与有共同命名实体的聚类进行比较
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/9b465dfc604dd992162041967c5ad67.png)
+* If similar tweets exist, the current tweet will be input to the Clustering module. Otherwise, it is skipped as noise. 对于新事件不利
+* 一般中心点由聚类的所有推特计算，这种计算方法计算成本高，本文挑选最相似的L条推特作为代表
+
+
+
+---
+
+## [Event Detection and Evolution Based on Knowledge Base](http://www.cse.ust.hk/~yqsong/papers/2018-KBCOM-Event.pdf)(KBCOM 2018)
+
+* “American president” was the most relavant to “Obama” in 2010s, but related to “Trump” recently
+* we present a novel **7-tuple model** based on event attributes, including time, location, participants, keywords, emotion, summary and most-related posts
+* 图方法在单实体事件表现不佳
+* 同一时间窗口下（10min）构建图
+* 搜集 Weibo,Wechat, Forum and News Media 的数据，随机挑选某天中一百万条数据
+
+
+
+---
+
+## [Real-time event detection using recurrent neural network in social sensors](https://journals.sagepub.com/doi/pdf/10.1177/1550147719856492)(International Journal of Distributed Sensor Networks 2019)
+
+* 使用多通道词向量,用CNN来辨别有效信息,用LSTM来进行事件检测
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/5a0178d3a80e4d863994a136eb3baf2.png)
+* 在地震数据集上实验,作为是否是地震相关事件的二分类任务
+* 对于时序模型,事件定义为正常时间序列数据的异常值
+
+
+
+---
+
+## [Mining Event-Oriented Topics in Microblog Stream with Unsupervised Multi-View Hierarchical Embedding](https://dl.acm.org/doi/pdf/10.1145/3173044?download=true)(ACM Transactions on Knowledge Discovery from Data 2018)
+
+* 两种话题的表示方法 : (1) word phrases and (2) multinomial distributions over word vocabulary
+* we design an unsupervised translation-based hierarchical embedding framework, and all of its training examples (the patterns of topics and relations) are automatically produced by our Mv-BRT in advance
+* **Definition** (**Event**). An event is a public and significant issue that happens at some specific time and place. Usually, event appears in the form of word phrases.
+* **Definition** (**Event-Oriented Topic**). An event-oriented topic ETi is a multinomial distribution over word vocabulary, i.e., ETi = {p(wj ) |j = 1, 2, . . . ,V }, whereV is the size of the vocabulary, and this word distribution can be interpreted with an event word phrase EPi
+* 用KL散度计算两个topic之间的相似度, 对于训练好的topic向量进行谱聚类
+* We employ the translation-based knowledge base embedding method to fulfill this task. the symbolic relations used in our cases are **join, left-absorb, right-absorb, and collapse**, 用transR训练话题向量
+* 通过某种方法估计聚类数量
+* TREC Tweets2011, weibo 和twitter 三个数据集
+
+
+
+---
+
+## [Real-time Event Detection on Social Data Streams](https://arxiv.org/pdf/1907.11229.pdf)(2019 KDD)
+
+* we **model** events as a list of clusters of trending entities over time, propose novel metrics for **measuring** clustering quality
+* we model an **event** as a list of clusters of trending entities indexed in time order, also referred to as a cluster chain
+* scale ; brevity ; noise ; dynamic
+* 分为 online 和 offline 两个部分,online关注于低延时和可变化, offline 关注于高品质
+* **contribution** : 1)Tracking of event evolution over time ; 2)Differentiated focus on **quality** of clustering; 3)Novel real-time system design
+* 基于文本的方法还需额外的工作去总结事件,而**基于特征**的方法可以将实体列表视为事件表示
+* topic detection ; Bursty terms ; incremental clustering (may not be feasible to use for the Twitter Firehose due to the scale of update)
+* 方法
+  * 首先进行初步筛选(去除噪音和重复信息), 对每条推特提取<entity,domain, 1>三元组, 然后根据实体在短期和长期出现次数之比来对实体的出现次数进行评估, 最后进行排序
+  * 之前的工作基本是同步进行趋势的检测和聚类,本文将这两部分开异步执行
+  * 提取 Named entities,Hashtags, Internal knowledge graph entities, 
+  * We use these **frequencies and cooccurrences** to compute similarities between entities, 用实体在推特的出现次数向量来表示实体,计算实体之间的cos相似,这种方法使得数据非常稀疏, 通过过滤器筛选实体之间的噪音, 构造实体图,以相似度为权重, 用图分割进行聚类, 
+  * 对于每一分钟的聚类结果,都尝试和前一分钟的结果进行连接,如没有找到连接,则新建事件id
+  * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/a804d710b8701b67c64f4d447b77372.png)
+* 评估:
+  * 一天的美国地区的英语推特
+  * For each chain, we select 20 representative tweets (10 most retweeted and 10 random tweets)
+  * 最后包括2695个实体和460个事件
+  * 提出一种新的评估方法, 考虑事件内的实体关系, 类似P,R和F1
+  * online performance: our system is able to scale and process millions of entities per minute
+
+
+
+---
+
+## [On the reliable detection of concept drift from streaming unlabeled data](https://arxiv.org/pdf/1704.00023.pdf)(Expert Syst 2017)
+
+## [Event detection and popularity prediction in microblogging](https://pdf.sciencedirectassets.com/271597/1-s2.0-S0925231214X00251/1-s2.0-S0925231214010893/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLWVhc3QtMSJIMEYCIQCF3x69XKi45SNJK7tGiAR2d6uAfV%2B0gQKqV86%2Fh4twWwIhAOBwIMbwMNgHlHDvqxlEPt2Kh8GsSmGjYllo2fw52FmTKtACCFwQAhoMMDU5MDAzNTQ2ODY1IgzaqhP%2FaXtjyIaiX%2FAqrQKtLB6az1qCC6r9v1gPCZk6kxD8GRjTrmaL3Q2V%2BlgSegLHEA86Y2JiTMkBvYwVHKrR8wGJaFoYX8brH6Y08%2BTBnaE41FH2udmRi7uNWNlxL8nEci6DnktjnicpeWbK4DV%2Bkp9UP3BO04EenayTf6FVEVuYDWFTyly8L7bk6KVatiNslO1PXy%2F6ph8lGdBS%2Fy8FyFqLryYGFe4flIejCwtNNkopHIP7TsEhkNWe4giJxLU8grzEa1uqoFztFkmGRwi%2F8uRegeK0sK2NmnQPKE4iTa6yuNtUE9O%2FjSpqNrn1DxBq7DE7jYhkIaI3VL%2F2n2IaK9BRDmn6MGGZipZ3LO%2FwDUjzJYK3MU09VeJKrIDdH7He%2BYKfYpesV4w8A0ZcT4BX9f5vuCDkrGb4k0COMIut2O8FOs4C%2B9Us3fXGixVv%2FGlp3PlFmUUxmvlAQIi8ZO04pmXKm%2FTx0J9QplFa4np%2BgNL9iYCJXJup0c%2FiM%2BA4qhSy5g3zQq%2FJlrd7chPx4txyBO%2Fu3dA8sfJEMC%2BK6WP%2Fwl3rcdNIg7wIcCkoR1FipNZJWeWjhcfBrA1YcCjhaUu3%2FRvBeQyS8IaAgX74Aun5lB8rXOFNc0YZSJt%2FB4qDrjp4pmiwjPiXRiyjIOSqOFJHQ2NcunxXM90EnmtiuBI4lJMIKPrP6U8VtLQ2zfDSCEVANLpzc1Uao%2BS4a5h0g653WyYcj987%2BKrXuyulUPLqbSS7Sj%2BCWP6beE1oeljQpbmxHUcqL%2F9gYhmtDfT0jOHYhGlAVS9PdfjKK72LgU6hxRFVsppZrSeq5z51p9LzVw6P9zwDOYgCUuhIyWpUPNWD0i3OHk24swHT3T3Wm1W3%2Fu0i0A%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20191215T124419Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYXQKDFVMK%2F20191215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=12030eb0e29edabc88067cad256c6551e3d6eb863f30066cac4f8aa5efb1a45f&hash=f3a114d45355d273d3324a1cac3c0c14099ec7dd65da2fc0113667de743ce585&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0925231214010893&tid=spdf-0d8ff8ef-4555-4045-b19b-97a5abfe7f4e&sid=0fb4c4cb8067534e2d0ac5e5e4639da5897bgxrqa&type=client)(Neurocomputing 2015)
