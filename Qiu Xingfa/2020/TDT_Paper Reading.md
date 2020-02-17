@@ -1326,7 +1326,137 @@ ___
   * 评估
   * 结果，新推特只与最新的2000条推特进行比较
 
+---
 
+## [Neural Network based Reinforcement Learning for Real-time Pushing on Text Stream](https://dl.acm.org/doi/pdf/10.1145/3077136.3080677?download=true)(SIGIR 2017)
+
+* 将实时推送转化为序列决策问题，并使用基于神经网络的强化学习算法
+* 对于数据流S = {t1, t2, ... , ti},有action set A={ap,as},表示push或skip
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/e32512470448872f1fdbc9c7ef97cd6.png)
+* 选择最新的k个文本作为输入（文章选择为10）
+* 以TREC 2016 Microblog Track为数据集，包含August 2, 2016 to到 August 11, 2016的约1%的推特数据，包含56个话题，每个推特对于所对应的话题有highly relevant, relevant and non-relevant三种标签，删除非英文推特和少于5个词的推特，最终包括57419条推特56个话题，每个话题都是一个推特流，选择48个话题作为训练，剩下的作为测试
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/f9f122a9befc6902cb6957aa4b7d017.png)
+* 包括统计特征，时间特征和语义特征，输入维度为311
+* 评估：推特不相关分数为0，相关为0.5，高度相关为1
+
+
+
+---
+
+## [Exploiting the Ground-Truth: An Adversarial Imitation Based Knowledge Distillation Approach for Event Detection](https://aaai.org/ojs/index.php/AAAI/article/view/4649/4527)(AAAI 2019)
+
+* 首先使用一个teacher module 从ground-truth中学习知识表示，然后通过对抗生成器使用一个student module去模仿teacher，知识蒸馏被使用于输入的特征编码中
+* ED面临的主要问题是自然语言表达的含糊性，一方面同一事件可以以不同的方式进行表达，另一方面，同一种表达方式可以是不同的事件
+* 对于ED，现有的方法基本上是使用额外的NLP工具预测块标签，然后将预测的标签转化为向量化的知识表示，这是一种pipeline的方法，容易产生错误传播
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/2efde1463602afba51d2bc3e7f88cf0.png)
+* 使用ACE2005作为实验数据集，包括33种事件+None type
+
+
+
+---
+
+## [Learning Dynamic Context Graphs for Predicting Social Events](https://dl.acm.org/doi/pdf/10.1145/3292500.3330919?download=true)(KDD 2019)
+
+* 问题定义：输入t-k至t-1时刻的文本序列，预测t时刻事件E是否会发生
+
+* 在事件预测任务中捕捉上下文信息存在的问题：
+
+  * 上下文结构和形式的不确定性；
+  * 高维的特征；
+  * 特征随时间的变化
+
+* BOW和分布式表示能够很好地对词，句子或者文档进行语义表示，但是很难对事件进行总结和表示，传统的方法依赖于特征工程，一般的图卷积网络，能够捕捉节点间的空间特征，但时间特征较难考虑，忽略了动态变化，
+
+* 提出一种动态的图卷积网络用来预测事件，并且生成能够代表事件信息的概念图
+
+  * 输入为连续k天在c城市的文章集合，输出时间t某个目标事件的发生概率，以天为单位构造图
+
+  * 以词为节点，邻接矩阵的维度为词数，以词共现来构造边，边的权重以point-wise mutual information（PMI）来表示，并且只考虑PMI>0的边，对于每个图，只考虑该时间窗口内的文章 
+    $$
+    PMI_t(i,j) = log\frac{d(i,j)}{d(i)d(j)/D}
+    $$
+
+  * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/ad71f4c67e2472fe820ed945a9c50f3.png)
+
+  * 动态图卷积其实和RNN类似
+    $$
+    H_{t+1}=g(\tilde{A_t}\tilde{H_t}W^{(t)}+b^{(t)})
+    $$
+
+  * TE层对特征进行了一次re-encode，同时考虑语义信息和图信息
+
+  $$
+  H_p^{(t)} = H_tW_p^{(t)}+b_p^{(t)}
+  $$
+
+  $$
+  H_e^{(t)} = H_0W_e^{(t)}+b_e^{(t)}
+  $$
+
+  $$
+  \tilde{H_t} = tanh([H_p^{(t)}||H_e^{(t)}])
+  $$
+
+  * Masked Nonlinear Transformation Layer 将隐含层输出padding为词表长度通过全连接层进行输出
+
+  $$
+  z_T = zero\_padding(H_T)
+  $$
+
+  $$
+  \tilde{y} = σ(z_Tw_m^{T}+b_m)
+  $$
+
+  
+
+* 数据为event data from ICEWS，包含20个主要类别以及下属的子类别，本文关注于 抗议 相关的事件，从四个相关国家挑选数据，使用tf-idf挑选关键词，最终每个图的节点数大约为600，
+
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/9dc5e5ad289ce651a457ed7b0a56b65.png)
+
+* 总结
+
+  * 文章提出一种动态图的事件表示方法，可以较好捕捉事件随时间的变化
+  * 对于某一时间窗口的数据来说，输入不同时刻的节点是一定的，（即短的时间窗口内关键词认为是不变的）但对于不同时间窗口来说，节点是不同的
+  * 作者以天为单位对数据进行分割，但实际上天对于很多事件来说已经很长了，一部分原因可能是因为数据不足
+
+---
+
+## [Joint Learning with Keyword Extraction for Event Detection in Social Media](http://ir.ia.ac.cn/bitstream/173211/21799/1/ISI18_long_088.pdf)(ISI 2018)
+
+* 问题定义：输入推特序列输出序列所对应的事件标签和事件关键词
+
+* 传统的event detection 方法都是基于简单的词频特征或者词袋模型，最近的一些深度学习的方法也有一些缺点，他们没有提供有效的方法去学习文本表示和事件表示之间的关联，只是简单地对文本表示取均值来表示事件，而且与传统的事件关键词表示方法相比，在隐藏空间的表示方法缺乏可解释性
+
+* 本文提出一种关键词提取和事件发现的联合学习方法，使用episode learning训练事件表示，还使用了强化学习方法
+
+* 文章提出的方法
+
+  * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/e7e1d6144a5199b88925a43193916c7.png)
+
+  * 首先对输入进行encode，使用使用Glove作为输入，bi-GRU和attention得到推特的表示z
+  * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/39bcf48c384b34a90f20eca7da49aa8.png)
+  * 对于某个时刻的推特t，文章认为有三种action的输出概率，即add，update和drop，这三种输出对应着对于当前推特数据的不同处理，在这个阶段，输入推特表示，事件关键词以及事件表示，通过attention，dense，maxpool和softmax层，输出此时action的概率
+  * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/5cdd83eb463ce1a5f24f2835c610961.png)
+
+  * 若选择update，则将zj输入全连接层得到属于各个事件的概率，并且对事件做一次更新，若选择add，方法和update类似，只是将Mj换成初始状态M0
+  * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/913ca333b970459e9c005ee8557c2c6.png)
+  * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/7be9e1fe36c86fced45f5de46b1e4b0.png)
+  * 对于episode learning，即随机挑选N个推特，属于k个不同的事件，组成一个episode进行训练，类似于batch，但序列前后是相关的，loss定义如下
+  * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/0c48bca13f02edb0d37c06988f4687b.png)
+  * 对于关键词的挑选，则将zj输入全连接层得到属于各个词为关键词的概率，论文提到说这里使用了强化学习的方法，POO（Proximal policy optimization algorithms），使用NMI作为reward，这个部分论文只是提了一句，不太清楚是怎么运作的
+
+* 使用NMI和B-cubed作为评估
+
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/755d240e348dd348a926852e7b851c2.png)
+
+* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/f82ca46e42b30956ffc732f0a3ad592.png)
+
+* 总结
+
+  * 与传统的event detection需要一些特征工程的方法相比，作者提出一种使用神经网络对event detection和keyword extraction进行联合学习的方法
+  * 存在的一些问题
+    * 文章的重要细节缺失，比如是否有训练集和测试集的划分，如何进行测试，使用了多少数据，测试时是怎么划分episode的，不同的episode之间是否有联系，用强化学习进行关键词提取的方法几乎没提，以及用什么词作为候选也不清楚，关键词也没有groun-truth
+    * episode learning似乎忽略了推特之间的时间先后关系，论文实验显示episode的长度对结果影响很大，>10效果就很差了，这与实际成千上万的推特一起输入的情况相差甚远，实验数据中事件数k>序列长度N的情况较难理解，
 
 ---
 
