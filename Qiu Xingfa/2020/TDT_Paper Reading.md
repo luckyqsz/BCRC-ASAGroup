@@ -595,11 +595,15 @@
 * The traditional approach to FSD, where each new story is compared to all, or a constantly growing subset, of previously seen stories, does not scale to the Twitter streaming setting
 * Allan et al. (2000) report that this distance（cosine） outperforms the KL divergence, weighted sum, and language models as distance functions on the first story detection task.
 * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/b0f3cacad9f3fb7003e3de2de0afd82.png)
+* 如果输入点和候选点的距离都很远的话，使用LSH难以找到最近邻，所以如果使用LSH找到的最小距离大于某个阈值，则将该点与最近的2000个文本进行比较寻找最近邻，
+* 在某个桶内的文档数为固定值，保留最新的文档，每个文档最多与3L个文档进行比较
+* 设置阈值t为0.5
 * In the context of first story detection, this means we are not allowed to store all of the previous data in main memory nor compare the new document to all the documents returned by LSH.
 
 ### Experiments
 
 * TDT5
+* 超平面数量k=13，两篇文档相似度阈值为0.2，
 * We compare the systems on the English part of the TDT5 dataset, consisting of 221, 306 documents from a time period spanning April 2003 to September 2003.
 * Data was collected through Twitter’s **streaming API**. Our corpus consists of 163.5 million timestamped tweets, totalling over 2 billion tokens
 * we employed two human experts to manually label all the tweets returned by our system as either Event, Neutral, or Spam.we only labeled the 1000 fastest growing threads from June 2009
@@ -1375,8 +1379,7 @@ ___
     $$
     PMI_t(i,j) = log\frac{d(i,j)}{d(i)d(j)/D}
     $$
-
-  * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/ad71f4c67e2472fe820ed945a9c50f3.png)
+    ![](C:\Users\qxf\AppData\Local\Temp\WeChat Files\ad71f4c67e2472fe820ed945a9c50f3.png)
 
   * 动态图卷积其实和RNN类似
     $$
@@ -1411,7 +1414,7 @@ ___
 
 * 数据为event data from ICEWS，包含20个主要类别以及下属的子类别，本文关注于 抗议 相关的事件，从四个相关国家挑选数据，使用tf-idf挑选关键词，最终每个图的节点数大约为600，
 
-* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/9dc5e5ad289ce651a457ed7b0a56b65.png)
+  ![](C:\Users\qxf\AppData\Local\Temp\WeChat Files\9dc5e5ad289ce651a457ed7b0a56b65.png)
 
 * 总结
 
@@ -1431,25 +1434,33 @@ ___
 
 * 文章提出的方法
 
-  * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/e7e1d6144a5199b88925a43193916c7.png)
+  ![](C:\Users\qxf\AppData\Local\Temp\WeChat Files\e7e1d6144a5199b88925a43193916c7.png)
 
   * 首先对输入进行encode，使用使用Glove作为输入，bi-GRU和attention得到推特的表示z
-  * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/39bcf48c384b34a90f20eca7da49aa8.png)
+
+    ![](C:\Users\qxf\AppData\Local\Temp\WeChat Files\39bcf48c384b34a90f20eca7da49aa8.png)
+
   * 对于某个时刻的推特t，文章认为有三种action的输出概率，即add，update和drop，这三种输出对应着对于当前推特数据的不同处理，在这个阶段，输入推特表示，事件关键词以及事件表示，通过attention，dense，maxpool和softmax层，输出此时action的概率
-  * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/5cdd83eb463ce1a5f24f2835c610961.png)
+
+    ![](C:\Users\qxf\AppData\Local\Temp\WeChat Files\5cdd83eb463ce1a5f24f2835c610961.png)
 
   * 若选择update，则将zj输入全连接层得到属于各个事件的概率，并且对事件做一次更新，若选择add，方法和update类似，只是将Mj换成初始状态M0
-  * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/913ca333b970459e9c005ee8557c2c6.png)
-  * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/7be9e1fe36c86fced45f5de46b1e4b0.png)
+
+    ![](C:\Users\qxf\AppData\Local\Temp\WeChat Files\913ca333b970459e9c005ee8557c2c6.png)
+
+    ![](C:\Users\qxf\AppData\Local\Temp\WeChat Files\7be9e1fe36c86fced45f5de46b1e4b0.png)
+
   * 对于episode learning，即随机挑选N个推特，属于k个不同的事件，组成一个episode进行训练，类似于batch，但序列前后是相关的，loss定义如下
-  * ![](https://github.com/qiuxingfa/picture_/blob/master/2019/0c48bca13f02edb0d37c06988f4687b.png)
+
+    ![](C:\Users\qxf\AppData\Local\Temp\WeChat Files\0c48bca13f02edb0d37c06988f4687b.png)
+
   * 对于关键词的挑选，则将zj输入全连接层得到属于各个词为关键词的概率，论文提到说这里使用了强化学习的方法，POO（Proximal policy optimization algorithms），使用NMI作为reward，这个部分论文只是提了一句，不太清楚是怎么运作的
 
 * 使用NMI和B-cubed作为评估
 
-* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/755d240e348dd348a926852e7b851c2.png)
+  ![](C:\Users\qxf\AppData\Local\Temp\WeChat Files\755d240e348dd348a926852e7b851c2.png)
 
-* ![](https://github.com/qiuxingfa/picture_/blob/master/2019/f82ca46e42b30956ffc732f0a3ad592.png)
+  ![](C:\Users\qxf\AppData\Local\Temp\WeChat Files\f82ca46e42b30956ffc732f0a3ad592.png)
 
 * 总结
 
@@ -1457,6 +1468,118 @@ ___
   * 存在的一些问题
     * 文章的重要细节缺失，比如是否有训练集和测试集的划分，如何进行测试，使用了多少数据，测试时是怎么划分episode的，不同的episode之间是否有联系，用强化学习进行关键词提取的方法几乎没提，以及用什么词作为候选也不清楚，关键词也没有groun-truth
     * episode learning似乎忽略了推特之间的时间先后关系，论文实验显示episode的长度对结果影响很大，>10效果就很差了，这与实际成千上万的推特一起输入的情况相差甚远，实验数据中事件数k>序列长度N的情况较难理解，
+
+---
+
+## [Real-Time Novel Event Detection from Social Media](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7930053)(ICDE 2017)
+
+* 方法
+
+  * 数据预处理包括删除非英文推特和噪音，聚类过程中认为转发和有同一链接的为同一事件，从语义标签的角度进行聚类，包括使用 TweetNLP识别专有名词（命名实体），Hashtag，使用OpenCalais以及一些规则提取地理位置，Mention，普通名词，TweetNLP识别动词，时间信息（对于新事件的发现作用不大，因为推特基本上在同一个时间窗口但属于不同事件）
+
+  * 将语义信息进行集合，权重和阈值将会从训练数据中学习，另一种方法为每个语义种类的相似度结果进行投票
+
+
+    $$
+    S(T_i,C_j)=a*V_P+b*V_m+c*V_l+d*V_v+e*V_n+f*V_h
+    $$
+
+  * 使用不同的方法对聚类进行表示
+
+  * 使用词向量而不是WordNet对词表进行扩展
+
+  * 新事件分数计算由如下公式计算，T为阈值，S_max为推特与事件的最大相似度
+    $$
+    S_{novelty}=(T-S_{max})/T
+    $$
+
+  * 事件的时间信息由推特的平均时间信息表示，时间信息提取由rule-based approach and the Temporal Specific Word Embedding两个部分进行提取，**本文只使用了规则的方法**，本文定义时间超过12h的事件为old
+
+  * 系统会将不活跃（10h无更新）的事件清出缓存
+
+* 实验
+
+  * 在event2012上进行实验，与[UMass](http://ciir.cs.umass.edu/pubfiles/ir-201.pdf)和[LSH](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.170.9438&rep=rep1&type=pdf)进行比较，15万条数据中最后得到约10万数据，并随机挑选130万无标签数据作为噪音，
+  * 使用NMI和B-cubed进行评估
+  * 对于使用这个系统的专家和记者来说，他们更关心召回率，使用随机挑选的2536条新闻媒体的标题作为benchmark，使用人工评估时间信息识别模块
+
+* 
+
+---
+
+## [A Consolidated Open Knowledge Representation for Multiple Texts](https://www.aclweb.org/anthology/W17-0902.pdf)(ACL 2017)
+
+* Introduction
+  * 如何在语义上合并表示多个文本信息
+  * 在集成时使用共指关系
+  * 包括 entities，consolidated propositions，lexical entailment graphs
+  * 通过各种指代链接技术对多文档的信息进行压缩
+* 数据
+  * 标注了27个簇共1257条推特
+
+
+
+---
+
+## [Real-Time Entity-Based Event Detection for Twitter](https://link.springer.com/content/pdf/10.1007%2F978-3-319-24027-5_6.pdf)(CLEF 2015)
+
+* 介绍
+  * 目前大部分方法对于实时性的要求来说太慢或者只能对特定的事件进行检测
+  * 本文使用 命名实体 增强事件检测
+  * 使用event2012数据集
+  * LSH：Streaming first story detection with application to twitter
+* 方法
+  * 预处理：句法分析和标注，使用GATE Twitter POS model
+  * 聚类：当前推特和包含相同实体的推特集合D
+  * 突发事件检测：根据指定事件窗口的推特数来判断
+* 实验
+  * 认为某事件的超过5%或者15条推特被检测到，则该事件被检测到
+  * 检测到的很多事件其实并不在标注数据中
+  * 只有47.5%的推特有至少一个命名实体
+  * 在所有506个事件中，有14个事件包含少于5条推特，42个事件少于15，72个事件少于30，另外，有41个事件有5条一下推特包含实体
+
+
+
+---
+
+## [Automatic Sub-Event Detection in Emergency Management Using Social Media](http://www-itec.uni-klu.ac.at/bib/files/p683.pdf)(WWW 2012)
+
+* 方法为tfidf+SOM(self-organizing map)
+* SOM是一种没有隐含层的特殊神经网络，以tf-idf作为输入，
+* 只使用一些文本信息
+
+
+
+---
+
+## [Online Event Detection and Tracking in Social Media Based on Neural Similarity Metric Learning](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8004905)(ISI 2017)
+
+* 这是论文[Joint Learning with Keyword Extraction for Event Detection in Social Media](http://ir.ia.ac.cn/bitstream/173211/21799/1/ISI18_long_088.pdf) 的前一篇论文，也是那篇论文的比较对象
+
+* 简介
+
+  * 本文使用神经网络学习相似度度量和事件的低维度表示
+  * 基于聚类的方法效果比其他方法要好
+
+* 方法
+
+  * 以glove为输入，后接双向GRU和attention，得到一个推特表示，通过全连接输出是否事件相关的概率
+  * 学习一个判断两条推特是否属于同一事件的相似度函数 f(T1,T2)=g(T1)*g(T2),即学习一个合适的推特表示函数，和上面类似，计算cosin相似
+  * 随机选取正样本和负样本，使用交叉熵作为损失函数
+  * 事件是推特表示的加权和，事件表示更新为
+
+  $$
+  K_i = \frac{K_i+α(\tilde{s}-K_i)}{||K_i+α(\tilde{s}-K_i)||}
+  $$
+
+  
+
+* 实验
+
+  * 标注2016年8月10号-2016年9月10号的619个事件，为了训练事件相关的分类器，分别选择33808条正负样本数据，并且分别选择100万正负样本训练事件表示，并使用2016年11月10号-2016年12月10号的957万数据作为评估
+  * 词向量维度为100，GRU size为100，memory size为100，更新率α为0.4，相似度阈值为0.5
+  * baseline：PS，TS，MABED
+  * 进行人工评估，选择数量最多的40个事件进行评估，判断事件是否有意义或者重复
 
 ---
 
