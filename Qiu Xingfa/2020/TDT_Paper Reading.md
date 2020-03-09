@@ -1493,9 +1493,9 @@ ___
     S_{novelty}=(T-S_{max})/T
     $$
 
-  * 事件的时间信息由推特的平均时间信息表示，时间信息提取由rule-based approach and the Temporal Specific Word Embedding两个部分进行提取，**本文只使用了规则的方法**，本文定义时间超过12h的事件为old
+* 事件的时间信息由推特的平均时间信息表示，时间信息提取由rule-based approach and the Temporal Specific Word Embedding两个部分进行提取，**本文只使用了规则的方法**，本文定义时间超过12h的事件为old
 
-  * 系统会将不活跃（10h无更新）的事件清出缓存
+* 系统会将不活跃（10h无更新）的事件清出缓存
 
 * 实验
 
@@ -1580,6 +1580,114 @@ ___
   * 词向量维度为100，GRU size为100，memory size为100，更新率α为0.4，相似度阈值为0.5
   * baseline：PS，TS，MABED
   * 进行人工评估，选择数量最多的40个事件进行评估，判断事件是否有意义或者重复
+
+
+
+---
+
+## [Graph-based Event Extraction from Twitter](https://hal.inria.fr/hal-01561439/document)(RANLP 2017)
+
+* 介绍
+
+  * 使用时间序列的事件图，然后使用简单的图算法和类似Page-Rank的方法
+  * 传统的基于关键词和命名实体的方法对于规模较小的事件不友好，而且拥有相同关键词而不属于同一事件的例子也很多
+  * 文章将事件抽取分为 特定领域（有监督分类） 和 开放领域
+
+* 方法
+
+  * 推特预处理: 使用TweetMotifs对推特进行预处理，删除转发、url、表情和non-ASCII 字符，文章并没有去除停用词，因为停用词可能会是命名实体的一部分如of，然后使用规则将hashtag进行切分，使用SysSpell对拼错的词语进行纠正
+
+  * 使用NERD-ML进行命名实体识别，并使用外部知识图谱进行链接
+  * 将命名实体和其前后k个词语作为节点，如果出现在同一个命名实体窗口则建立边，以共现程度来表示权重
+  * 使用图分割算法，并且使用类似PageRank的方法对节点排序
+
+
+
+* 实验
+  * 在FSD和EVENT2012上进行实验
+
+
+
+---
+
+## [Detection of Event Onset using Twitter](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7727381)(IJCNN 2016)
+
+* 介绍
+
+  * LDA方法需要提前定义事件，但对于noisy event不太能检测出来，LSH需要大量的计算
+
+* 方法
+
+  ![](pic/001.png)
+
+  * Tweet Tokenization and Graph Generation，删除特殊字符、停用词、URL和转发标识
+  * Graph Pruning and Clustering，删除一些出现频率较低和不重要的词
+
+* 实验
+
+  * 使用event2012和Drug两个数据集
+
+---
+
+## [A Multi-view Clustering Model for Event Detection in Twitter](https://link.springer.com/content/pdf/10.1007%2F978-3-319-77116-8_27.pdf)(CICLing 2017)
+
+* 介绍
+
+  * 很少有方法考虑时间序列信息
+  * 使用多视角聚类方法对关键词进行聚类
+  * 基于文本聚类的方法需要处理大量的文本
+  * 主题模型较难捕捉同一时间段的事件，对于短文本效果也不好
+  * 关键词聚类是主要方法
+
+* 方法
+
+  ![](pic/002.png)
+
+  * 三个假设：1）关键词的集合可以代表事件；2）主题模型可以很好地捕捉到主题词；3）在同一时间段共同出现的词可能代表着同一事件
+  * 使用DTW（dynamic time warping）算法计算两个词的距离
+
+* 实验
+
+  * 使用FSD2011和EVENT2012两个数据集
+  * 使用ARK进行预处理
+  * 与MABED和LDA方法进行对比
+  * 使用人工评估
+
+
+
+---
+
+## [ A Novel Event Detection Model Basedon Graph Convolutional Network](https://kopernio.com/viewer?doi=10.1007/978-981-15-3281-8_15&route=6)(WISE 2019)
+
+* 介绍
+
+  * tf-idf和LDA的方法没有捕捉到文本的结构信息,本文提出使用图卷积网络的方法,使用ConceptGraph来表示文档,并使用SiameseGCN来计算相似度
+
+* 方法
+
+  ![](pic/003.png)
+
+  * 首先建立一个ConceptGraph,将结构信息和语义信息进行融合,然后训练一个SiamGCN,以初始化的conceptGraph作为输入,输出graph embedding,加上tf-idf向量和1维的时间向量,最后使用bik-means方法进行聚类
+  * 使用jieba进行分词,使用LTP进行命名实体识别和关键词识别
+
+  ![](pic/004.png)
+
+  * 首先构建关键词共现图,以一个句子作为时间窗口,将密集的子图称为concept,使用**betweenness centrality score** based on overlapping community detection algorithms 提取 concept,以平均word2vec来表示节点的初始特征向量,tf-idf相似度作为边权重
+  * Siam GCN
+
+  $$
+  H^{(l+1)} = σ(\tilde{D}^{-1/2}\tilde{A}\tilde{D}^{-1/2}H^{(l)}W^{(l)})
+  $$
+
+  * 通过L2 distance将两个graph embedding结合,并使用hing loss作为损失函数
+  * 使用bik-means算法进行聚类
+
+* 实验
+
+  * 标注了中文数据集,包括12865对正样本和16198对负样本
+  * 用一些方法作为baseline,TF-IDF,JS-IDF等方法,
+
+
 
 ---
 
