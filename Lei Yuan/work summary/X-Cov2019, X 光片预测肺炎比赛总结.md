@@ -15,7 +15,7 @@
 
 1. backbone推荐， efficientNet
 
-   ![](C:\Users\91190\Desktop\cov1.PNG)
+   ![](..images\cov1.PNG)
 
    - 参数量小，可以快速训练，且acc比其他backbone高。
 
