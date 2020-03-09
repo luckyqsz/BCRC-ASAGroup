@@ -15,7 +15,7 @@
 
 1. backbone推荐， efficientNet
 
-   ![](..images\cov1.PNG)
+   ![](..image\cov1.PNG)
 
    - 参数量小，可以快速训练，且acc比其他backbone高。
 
@@ -23,7 +23,7 @@
 
    - activate function可以尝试 f = x*sigmoid(x), acc比ReLu高，速度没感觉慢。
 
-     ![](C:\Users\91190\Desktop\cov3.PNG)
+     ![](..image\cov3.PNG)
 
    - 输入图片尺寸一定要与网络深度匹配， 否则acc掉得很厉害，应该是感受野的问题。
 
@@ -34,7 +34,7 @@
 
 3. 优化器 SGD + lr策略，慎用adam等自适应优化器
 
-   ![](C:\Users\91190\Desktop\cov2.PNG)
+   ![](..image\cov2.PNG)
 
    - 自适应的优化器的收敛速度很快，但是在验证集上的acc会比SGD低几个点。
    - 实际上pytorch中的SGD相比原始的SGD集合了很多，可以将最后一个参数设为true，加快收敛。
